@@ -1,8 +1,23 @@
 # Getting started with your Artillery 3D printer
 
-This guide is aimed at new people looking to get into 3D printing and is a collection of articles and videos that helped me getting starting. It is mostly aimed at setting up your new Artillery 3D printer, be it the Genius or Sidewinder X1 but the same principles apply to most cartesian 3D printers. Inspiration came from the repeating questions in the [Artillery Genius facebook group](https://www.facebook.com/groups/artillerygenius/), people seem to have the same issues and ask the same questions mostly due to the fact that they don't understand the process of 3D printing in general, have not read the basics, or did not check/calibrate their printers.
+This guide is aimed at new people looking to get into 3D printing and is a collection of articles and videos that helped me getting starting. It is mostly aimed at setting up your new Artillery 3D printer, be it the Genius or Sidewinder X1 but the same principles apply to most cartesian 3D printers. Inspiration came from the repeating questions in the [Artillery Genius facebook group](https://www.facebook.com/groups/artillerygenius/), people seem to have the same issues and ask the same questions mostly due to the fact that they don't understand the process of 3D printing in general, have not read the basics, or did not check/calibrate their printers. 
 
-Fist things first. **A 3D printer is nothing like regular printer. You can't just plug it in and click 'print'**. If you bought one and expect it to 'just work' prepare to be dissapointed. Unless you spend at least 800 EUR on a Prusa i3 MK3S (and not even that will guarantee a perfect print each time) your cheap Chinese 3D printer won't perform like in the reviews you read or watched. The reviewers have a lot of experience, understand how everything works and know how to tune those devices to perform best. Quality control of various devices coming from China is getting better but it's far form perfect so issues like a loose screw, unplugged cable, broken components etc. are common things. If you don't take time to understand how it all works, finding the culprit causing your issue can take a lot of time and frustration. So be prepared to spend a few days learning a bit about mechanics, electronics and software development.
+Fist things first.  
+
+> **A 3D printer is nothing like regular printer.  
+You can't just plug it in and click 'print'**. 
+
+If you buy a 3D printer and expect it to '*just work*' prepare to be disappointed. Unless you spend at least 800 EUR on a [Prusa i3 MK3S](https://shop.prusa3d.com/en/3d-printers/180-original-prusa-i3-mk3-kit.html) (and not even that will guarantee a perfect print each time) your under $300 Chinese 3D printer won't perform like in the reviews you read or watched. The reviewers have a lot of experience, understand how everything works and know how to tune those devices to perform best. Quality control of products coming from China is getting better but it's far form perfect so issues like a loose screw, unplugged cable, broken components etc. are still common things. If you don't take time to understand how it all works, finding the culprit for your issue can take a lot of time and frustration. So be prepared to spend a few days learning a bit about the mechanics, electronics and software development involved in 3D printing. 
+
+Be patient and go through the following topics in order:
+- How 3D printing works
+- Overview of a 3D printer
+- Role of the slicing software
+- Printing materials
+- First things to do after unpacking your printer (calibration, bed leveling and first things to print) and what not to do
+- Artillery printers in depth (components, firmware upgrade)
+- Pimp up your artillery
+- Common issues and fixes
 
 So, now that we got that out of the way, let's get started !
 
@@ -12,7 +27,7 @@ First and most important step to succesful 3D printing is to understand how 3D p
 
 There are multiple types of 3D printing techniques, but we are focusing on the most popular and afordable one: [fused filament fabrication (FFF) or fused deposition modeling (FDM)](https://en.wikipedia.org/wiki/Fused_filament_fabrication).
 
-> A 3D printer essentially works by extruding molten plastic through a tiny nozzle that it moves around precisely under computer control. It prints one layer, waits for it to dry, and then prints the next layer on top.  
+> **A 3D printer essentially works by extruding molten plastic through a tiny nozzle that it moves around precisely under computer control. It prints one layer, waits for it to dry, and then prints the next layer on top.**  
 > *Full article: [3D printers](https://www.explainthatstuff.com/how-3d-printers-work.html)*
 
 Sounds easy, right ? Except it's not, as we don't live in an ideal world. There are a lot of factors that influence 3D printing starting from the quality and precision of the 3D printer itself, type and brand of material you're printing, bed surface, room temperature and humidity, slicer settings etc. But don't worry, advances over the past years have improved material printability and also printer parts got cheaper and so did the printers themselfs.
