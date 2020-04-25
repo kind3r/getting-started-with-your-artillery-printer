@@ -126,11 +126,43 @@ If a layer cools too fast, the print will deform and it will break the adhesion 
 
 ## Mainboard
 
-> TODO: role, software (Marlin), version
+The mainboard is the brains of your 3D printer. It's usually powered by an 8bit CPU like an Arduino (but more recently cheap 32bit boards are starting to become more popular), which runs a piece of software called **firmware** that interfaces with the motors and sensors and controls everything happening in your printer. 
+
+The mainboard accepts G-code commands from an external or embeded source and performs the actions dictated by those commands. The source of the G-code commands is usually connected via a serial port to the CPU. Since the 8bit CPU has a very limited number of resources at it's disposal, the mainboard can only store and process a limited number of commands, so it's the responsability of the control source to make sure it sends the commands at a pace the printer can process them and has time to perform the required actions.
+
+In case of Artillery, the TFT acts like an external device that can read files from SD Card or USB and send the contents of those files line by line to the mainboard while also monitoring the various sensors the mainboard has control over. Specific to Artillery setup is that the filament sensor is connected to the TFT which will pause printing by not sending further commands to the mainboard until the filament sensor issue is solved. Another thing to note is that the TFT and the USB connection of the mainboard share the same serial port so the TFT can interfere with communication over USB. More on that later.
+
+When instructed to reach a specific temperature for the extruder or bed, the mainboard has to start and stop the heating element of that specific part while monitoring the temperature through termistors. The heating elements are just on/off, they either heat or they don't. There is no way to tell a heating element to heat for a specific temperature. In order to make things easier on the CPU, a calibration step called **PID tunning** is performed so that the firmware knows in advance how often should the heating element be turned on or off to maintain a specific temperature as constant as possible without having to pool the termistor all the time - which consumes a lot of CPU resources. Think something in the terms of muscle memory, you do things without having to thing about how you do them. This frees the CPU from having to check and decide what to do with the heating elements and leaves more resources for performing the actual printing moves.
+
+The mainboard is also responsible for some safety features, depending on how the firmware was setup. This include protection against overheating of the bed and extruder, making sure that the movements of the motors stay whithin the phisical dimensions of the machine, not trying to extrude filament while the nozzle is cold etc. 
+
+### Marlin firmware
+
+Most printers run on [Marlin firmware](https://marlinfw.org/). There are two versions of Marlin available: 1.x and 2.x (I will just call them 1 and 2). 
+
+**Version 1** is considered stable and no longer being developed. It only runs on 8bit platforms only and has all the features that those boards can support.
+
+**Version 2** is under constant developement so releases are frequent. The main benefit versus Version 1 is that it can run on 32bit boards. The downside is that it brings no extra features for the 8bit boards but can introduce new bugs.
+
+This is why owners of 8bit boards (like the ones in Artillery printers) should stick to Version 1. There is no real benefit to running Version 2 on 8bit boards and it can have the downside of adding new bugs.
+
+There are various printer firmware builds out there, based on both Version 1 and 2, which basicaly enable or disable some of the features present in the Marlin firmware via configuration files. I decided to build my own firmware based on my needs and experience with the printer and I found it easy to do.
+
+> TODO: list of firmwares
+
+### G-code
+
+A full list of the G-code commands can be found on Marlin's website [G-code Index](https://marlinfw.org/meta/gcode/). It's not a mandatory read but it's a good place to get information about what each command does when in doubt.
 
 ## Control screen
 
-> TODO: role, types (mainboard controlled, independent)
+All printers have some sort of control interface that enables you to start printing from an SD Card or USB stick. It also allows you to issue some predifined commands to the mainboard (like moving each axis, start heating, turning fans on and off etc.) or make various firmware settings.
+
+As mentioned previously, there are 2 types of controllers: the basic ones that are just a monocrome LCD with a rotary switch that connects and is controlled by the mainboard's firmware (like in Prusa printers for example) and independent ones like the color touch screens found in Artillery and other printers.
+
+The independent ones like the MKS, BTT etc. are basically a separate device (also known as TFT) that communicates with the mainboard via a serial port and is able to send commands to it this way. They run their own firmware (some of them open source, some not) and are completly separate from the mainboard. They only comunicate with the mainboard via G-code commands, albeit the predefined ones that make up the touch user interface, or the one in the g-code files from SD Card or USB. 
+
+In case of Artillery a MKS TFT28 is used which recently got open sourced, but the amount of customisation for this kind of device is limited at the moment to the icons and the 7 commands in the Tools -> More menu.
 
 
 **Next step**: [Printing materials](materials)
