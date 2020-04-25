@@ -15,6 +15,8 @@ In order to be able to achive the 3D spatial movement, the [cartesian](https://e
 
 Now that you have an ideea about the movement of the motors, let's investigate the role of the motor driver. The driver handles routing the power to the 2 stepper motor coil pairs while providing an easy control interface. The printer's CPU tells the driver to move a specified number of steps in some direction with a specified speed and the driver translates this into alternating current for the 2 coil pairs in order to perform the specified move. Drivers can perform silent moves by using babystepping technology, they can also detect if a motor moved or not thus providing virtual endstops. 
 
+> TODO: motor steps calibration
+
 A stepper motor (and driver) has no way of knowing it's current position, let alone the position of the axis it's moving. What it can do, is mark it's current position as an initial refference and record future positions relative to that initial refference. So in order to have the actual position relative to the print surface, printers use endstops as a reference position of one axis (normaly the 0 coordinate). That is what **homing** is for. The printer moves the specified axis motor slowly in the direction of the endstop until that endstop triggers and then records that position as being 0 for that axis. All further moves will now have a reference point so the CPU can address coordinates directly.
 
 ## X and Y axis
@@ -134,6 +136,8 @@ The mainboard accepts G-code commands from an external or embeded source and per
 In case of Artillery, the TFT acts like an external device that can read files from SD Card or USB and send the contents of those files line by line to the mainboard while also monitoring the various sensors the mainboard has control over. Specific to Artillery setup is that the filament sensor is connected to the TFT which will pause printing by not sending further commands to the mainboard until the filament sensor issue is solved. Another thing to note is that the TFT and the USB connection of the mainboard share the same serial port so the TFT can interfere with communication over USB. More on that later.
 
 When instructed to reach a specific temperature for the extruder or bed, the mainboard has to start and stop the heating element of that specific part while monitoring the temperature through termistors. The heating elements are just on/off, they either heat or they don't. There is no way to tell a heating element to heat for a specific temperature. In order to make things easier on the CPU, a calibration step called **PID tunning** is performed so that the firmware knows in advance how often should the heating element be turned on or off to maintain a specific temperature as constant as possible without having to pool the termistor all the time - which consumes a lot of CPU resources. Think something in the terms of muscle memory, you do things without having to thing about how you do them. This frees the CPU from having to check and decide what to do with the heating elements and leaves more resources for performing the actual printing moves.
+
+> TODO: MOSFETs controlling temps.
 
 The mainboard is also responsible for some safety features, depending on how the firmware was setup. This include protection against overheating of the bed and extruder, making sure that the movements of the motors stay whithin the phisical dimensions of the machine, not trying to extrude filament while the nozzle is cold etc. 
 
