@@ -9,3 +9,6 @@ Now that we have a basic understanding of [how a 3D printer works](3d-printer-ov
 
 
 **Next step**: [First things to do after unpacking your printer](setup)
+
+All topics:
+{% include_relative _toc.md %}

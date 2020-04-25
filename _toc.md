@@ -1,0 +1,9 @@
+- [Introduction](index)
+- [How 3D printing works](understanding-3d-printing)
+- [Overview of a 3D printer](3d-printer-overview)
+- [Printing materials](materials)
+- [Role of the slicing software](slicer)
+- [First things to do after unpacking your printer](setup) (calibration, bed leveling and first things to print) and what not to do
+- Artillery printers in depth (components, firmware upgrade)
+- Pimp up your artillery
+- Common issues and fixes

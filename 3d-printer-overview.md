@@ -28,6 +28,7 @@ Other issues can come from the fact that the moving parts (the bed and the extru
 ## Z axis
 
 Z axis is a bit different. The motor is connected to a threaded rod via a coupler. This works like a nut on a screw: you turn the screw and the nut goes up or down. Of course, the screw (rod) being so long, issues can apear if it's not perfectly straight. This is why the coupler has a flexible part designed to compensate for the rod not being perfectly straight. The Genius on the other hand uses a different mechanism in the form of a **Z nut coupler** mounted on the X caridge that alows some play to compensate for a not so straight rod. Is this better than a flexible coupler ? Time will tell.
+
 ![Z-coupler](img/z_coupler.png)
 
 ## Extruder block
@@ -166,3 +167,6 @@ In case of Artillery a MKS TFT28 is used which recently got open sourced, but th
 
 
 **Next step**: [Printing materials](materials)
+
+All topics:
+{% include_relative _toc.md %}
