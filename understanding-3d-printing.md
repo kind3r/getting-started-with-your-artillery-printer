@@ -20,3 +20,4 @@ The 3 main components of a 3D printing environment are:
 A good video overview of the whole process is [3D printing 101 - The FFF 3D Printing Process](https://www.youtube.com/watch?v=w-e-SQk-wmM). 
 
 
+**Next step**: [Overview of a 3D printer](3d-printer-overview)

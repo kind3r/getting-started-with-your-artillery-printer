@@ -15,11 +15,13 @@ If you buy a 3D printer and expect it to '*just work*' prepare to be disappointe
 Be patient and go through the following topics in order:
 - [How 3D printing works](understanding-3d-printing)
 - [Overview of a 3D printer](3d-printer-overview)
+- [Printing materials](materials)
 - [Role of the slicing software](slicer)
-- Printing materials
-- First things to do after unpacking your printer (calibration, bed leveling and first things to print) and what not to do
+- [First things to do after unpacking your printer](setup) (calibration, bed leveling and first things to print) and what not to do
 - Artillery printers in depth (components, firmware upgrade)
 - Pimp up your artillery
 - Common issues and fixes
 
 So, now that we got that out of the way, let's get started !
+
+**Next step**: [How 3D printing works](understanding-3d-printing)
