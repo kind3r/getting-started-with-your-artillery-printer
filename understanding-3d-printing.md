@@ -10,7 +10,7 @@ There are multiple types of 3D printing techniques, but we are focusing on the m
 > **A 3D printer essentially works by extruding molten plastic through a tiny nozzle that it moves around precisely under computer control. It prints one layer, waits for it to dry, and then prints the next layer on top.**  
 > *Full article: [3D printers](https://www.explainthatstuff.com/how-3d-printers-work.html)*
 
-Sounds easy, right ? Except it's not, as we don't live in an ideal world. There are a lot of factors that influence 3D printing starting from the quality and precision of the 3D printer itself, type and brand of material you're printing, bed surface, room temperature and humidity, slicer settings etc. But don't worry, advances over the past years have improved material printability and also printer parts got cheaper and so did the printers themselfs.
+Sounds easy, right ? Except it's not, as we don't live in an ideal world. There are a lot of factors that influence 3D printing starting from the quality and precision of the 3D printer itself, type and brand of material you're printing, bed surface, room temperature and humidity, slicer settings etc. But don't worry, advances over the past years have improved material printability and also printer parts got cheaper and so did the printers themselves.
 
 The 3 main components of a 3D printing environment are:
 - The 3D printer

@@ -5,7 +5,7 @@ title: "Anatomy of a 3D printer"
 
 At it's core level, a 3D printer is basicaly a molten plastic spiting contraption (extruder block or tool) that can move in 3D space to create your model. For a better comparison, think of a motorized hot glue gun. 
 
-> TODO: 3d printer schema (screen, mainboard, drivers, motors, extruder)
+![Artillery Genius main components overview](img/Genius-components-overview.png)
 
 In order to be able to achive the 3D spatial movement, the [cartesian](https://en.wikipedia.org/wiki/Cartesian_coordinate_robot) printer has 3 axis (X, Y and Z) independently controlled by 3 or more stepper motors which ensure precise movement of the extruder block so that the molten plastic is dropped where it needs to be. X and Y axis are both on the horizontal plane leaving the Z axis for vertical movement. 
 
@@ -13,29 +13,33 @@ In order to be able to achive the 3D spatial movement, the [cartesian](https://e
 
 > For more details about the stepper motors watch: [How does a Stepper Motor work ?](https://www.youtube.com/watch?v=eyqwLiowZiU). 
 
-Now that you have an ideea about the movement of the motors, let's investigate the role of the motor driver. The driver handles routing the power to the 2 stepper motor coil pairs while providing an easy control interface. The printer's CPU tells the driver to move a specified number of steps in some direction with a specified speed and the driver translates this into alternating current for the 2 coil pairs in order to perform the specified move. Drivers can perform silent moves by using babystepping technology, they can also detect if a motor moved or not thus providing virtual endstops. 
+Now that you have an ideea about the movement of the motors, let's investigate the role of the motor driver. The driver handles routing the power to the 2 stepper motor coil pairs while providing an easy control interface. The printer's CPU tells the driver to move a specified number of steps in some direction with a specified speed and acceleration and the driver translates this into alternating current for the 2 coil pairs in order to perform the specified move. Drivers can perform silent moves by using babystepping technology, they can also detect if a motor actually moved or not thus providing virtual endstops. 
 
-> TODO: motor steps calibration
+In order for the printer to be able to move a specified distance a step calibration is performed (usually by the printer manufacturer). In the end we have to tell the printer's firmware how many motor steps are required to move the specified axis for 1mm. The firmware can then extrapolate this information and precisely move the required distance. While X,Y and Z axis usually don't require aditional calibration to be done by the user, the E axis (the extruder pushing the filament) might require some tunning.
 
-A stepper motor (and driver) has no way of knowing it's current position, let alone the position of the axis it's moving. What it can do, is mark it's current position as an initial refference and record future positions relative to that initial refference. So in order to have the actual position relative to the print surface, printers use endstops as a reference position of one axis (normaly the 0 coordinate). That is what **homing** is for. The printer moves the specified axis motor slowly in the direction of the endstop until that endstop triggers and then records that position as being 0 for that axis. All further moves will now have a reference point so the CPU can address coordinates directly.
+A stepper motor (and driver) has no way of knowing it's current position, let alone the position of the axis it's moving. What it can do, is mark it's current position as an initial refference and record future positions relative to that initial refference. So in order to have the abosolute position on the print surface, printers use endstops as a reference position of one axis (normaly the 0 coordinate). That is what **homing** is for. The printer moves the specified axis motor slowly in the direction of the endstop until that endstop triggers and then records that position as being 0 for that axis. All further moves will now have a reference point so the CPU can address coordinates directly.
+
+Another thing to keep in mind is that motors need to **accelerate** to get to the desired speed, just like you would when drivin a car. From a stopped position you can't just start driving at 100Km/h, you need to accelerate gradually to reach that speed. Same goes for slowing down, because of **inertia**, they can't just stop in place. This is important especially around the multiple sharp edges of your print when the printer has to make a sudden change direction. This can lead to vibration that translates into imperfections in your print and extra noise.
 
 ## X and Y axis
 
 X and Y axis work in similar ways, they are both usually controlled by a single stepper motor each and a belt that moves the extruder block left and right for the X axis and the bed (back and front) for Y axis. 
 
-Common issues with X and Y axis derive from the tightness of the belts. If the belts for those axis are too lose, when the motor is turning the belt might not so the desired movement is not transmited to the extruder block or the bed, resulting in shifting layers. On the other hand, if the belt is too tight it will put too much pressure on the axle of the motor and the motor itself won't be able to move, also resluting in shifting layers. 
+Common issues with X and Y axis derive from the tightness of the belts. If the belts for those axis are too lose, when the motor is turning the belt might not so the desired movement is not transmited to the extruder block or the bed, resulting in shifting layers. On the other hand, if the belt is too tight it will put too much pressure on the axle of the motor and the motor itself won't be able to move, also resulting in shifting layers. 
 
 Other issues can come from the fact that the moving parts (the bed and the extruder block) are not properly fixed to their frame on which they slide. On some printers metal rods with linear ball bearings are used. But in case of Artillery aluminium v-rails are used to suport the heavier direct drive extruder (more about later). On this type of system, wheels on one side of the rail have excentric spacers that allows moving the wheel closer or farther from the rail thus making sure the moving part only slides on the desired axis. If the wheels are too close to the rail, the motor will have difficulty pulling the bed or the extruder block and will create wear on the belts and the wheels. If the wheels are too far, then the moving part will have a play and this will lead to inconsistent layers.
 
 ## Z axis
 
-Z axis is a bit different. The motor is connected to a threaded rod via a coupler. This works like a nut on a screw: you turn the screw and the nut goes up or down. Of course, the screw (rod) being so long, issues can apear if it's not perfectly straight. This is why the coupler has a flexible part designed to compensate for the rod not being perfectly straight. The Genius on the other hand uses a different mechanism in the form of a **Z nut coupler** mounted on the X caridge that alows some play to compensate for a not so straight rod. Is this better than a flexible coupler ? Time will tell.
+![Genius Z Nut Coupler](img/Genius-z-nut-coupler.png)
 
-![Z-coupler](img/z_coupler.png)
+Z axis is a bit different. The motor is connected to a threaded rod via a coupler. This works like a nut on a screw: you turn the screw and the nut goes up or down. Of course, the screw (rod) being so long, issues can apear if it's not perfectly straight. This is why the coupler has a flexible part designed to compensate for the rod not being perfectly straight. The Genius on the other hand uses a different mechanism in the form of a **Z nut coupler** mounted on the X caridge that alows some play to compensate for a not so straight rod. Is this better than a flexible coupler ? Time will tell.
 
 ## Extruder block
 
-The extruder block (or generic tool) is responsible for droping molten plastic on the print surface. It's centerpiece is the **hotend**, this is where most of the magic happens. The basic principle is that a **heating element** heats the **heatblock** which in turn heats the **nozzle** while the **thermistor** monitors the temperature. The role of the **heatbreak** is to stop the heat coming from the **heatblock** to transfer to the other parts of the extruder block. The filament is pushed through the heatbreak and reaches the nozzle where it melts and is then extruded on the print surface. In order to further help disipate the heat coming from the heatblock, the heatbreak is also conected to a **radiator cooled by a fan**.
+![Genius extruder block](img/Genius-extruder-block.png)
+
+The **extruder block** (or generic **tool**) is responsible for droping molten plastic on the print surface. It's centerpiece is the **hotend**, this is where most of the magic happens. The basic principle is that a **heating element** heats the **heatblock** which in turn heats the **nozzle** while the **thermistor** monitors the temperature. The role of the **heatbreak** is to stop the heat coming from the **heatblock** to transfer to the other parts of the extruder block. The filament is pushed through the heatbreak and reaches the nozzle where it melts and is then extruded on the print surface. In order to further help disipate the heat coming from the heatblock, the heatbreak is also conected to a **radiator cooled by a fan**.
 
 > For more details about the hotend parts (**nozzle, heatblock, heating element, thermistor** and **heatbreak**) watch [Hotend explained](https://www.youtube.com/watch?v=OzRAVkXjw3I).
 
@@ -105,7 +109,7 @@ Beds are made from different materials on which various plastics adhere more or 
 
 ### A clean bed makes for a good night sleep
 
-Clean your bed after every print with [IPA (Isopropyl alcohol)](https://en.wikipedia.org/wiki/Isopropyl_alcohol) or pure [Acetone](https://en.wikipedia.org/wiki/Acetone) (nail polish removers have acetone as a base but it's usually combined with something else that you don't want on your bed). This will help in removing leftover plastic particles and dust from the bed but most important it will elminate any grease left over by you touching the bed with your bare hands while removing a print.
+Clean your bed before every print with [IPA (Isopropyl alcohol)](https://en.wikipedia.org/wiki/Isopropyl_alcohol) or pure [Acetone](https://en.wikipedia.org/wiki/Acetone) (nail polish removers have acetone as a base but it's usually combined with something else that you don't want on your bed). This will help in removing leftover plastic particles and dust from the bed but most important it will elminate any grease left over by you touching the bed with your bare hands while removing a print.
 
 ### A leveled bed provides good adhesion and even layers
 
@@ -151,9 +155,8 @@ Most printers run on [Marlin firmware](https://marlinfw.org/). There are two ver
 
 This is why owners of 8bit boards (like the ones in Artillery printers) should stick to Version 1. There is no real benefit to running Version 2 on 8bit boards and it can have the downside of adding new bugs.
 
-There are various printer firmware builds out there, based on both Version 1 and 2, which basicaly enable or disable some of the features present in the Marlin firmware via configuration files. I decided to build my own firmware based on my needs and experience with the printer and I found it easy to do.
+There are various printer firmware builds out there, based on both Version 1 and 2, which basicaly enable or disable some of the features present in the Marlin firmware via configuration files and also set some different defaults and constraints. I decided to build my own firmware based on my needs and experience with the printer and I found it easy to do. More on Artillery specific firmware variants later.
 
-> TODO: list of firmwares
 
 ### G-code
 
@@ -163,7 +166,7 @@ A full list of the G-code commands can be found on Marlin's website [G-code Inde
 
 All printers have some sort of control interface that enables you to start printing from an SD Card or USB stick. It also allows you to issue some predifined commands to the mainboard (like moving each axis, start heating, turning fans on and off etc.) or make various firmware settings.
 
-As mentioned previously, there are 2 types of controllers: the basic ones that are just a monocrome LCD with a rotary switch that connects and is controlled by the mainboard's firmware (like in Prusa printers for example) and independent ones like the color touch screens found in Artillery and other printers.
+As mentioned previously, there are 2 types of controllers: the basic ones that are just a monochrome LCD with a rotary switch that connects and is controlled by the mainboard's firmware (like in Prusa printers for example) and independent ones like the color touch screens found in Artillery and other printers.
 
 The independent ones like the MKS, BTT etc. are basically a separate device (also known as TFT) that communicates with the mainboard via a serial port and is able to send commands to it this way. They run their own firmware (some of them open source, some not) and are completly separate from the mainboard. They only comunicate with the mainboard via G-code commands, albeit the predefined ones that make up the touch user interface, or the one in the g-code files from SD Card or USB. 
 

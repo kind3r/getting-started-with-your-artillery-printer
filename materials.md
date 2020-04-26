@@ -51,7 +51,7 @@ I do recommend that you start with **PLA** as a beginer. **PLA** is very forgivi
 
 **PLA** is good for **decorative parts**, but because it has **glass transition** temperature of around 55C it is not recomended for **functional parts**. Altho it can be annealed, it still does not compare to other materials specificaly designed for strength and longevity.
 
-**UV light** (like the sun) also affects the color and the layer adhesion of your prints, so it's a good ideea to keep your prints indoor.
+**UV light** (like the sun) affects the color and might decompose your prints, so it's a good ideea to keep your prints indoor.
 
 **PLA** is also easy to post process by sanding, painting etc.
 
@@ -65,7 +65,7 @@ The next material you might be interested in printing is the PET family, most sp
 
 Printing **PETG** requires higher temperatures than **PLA** and bed adhesion can be more tricky. For me 90C on the bed works fine for most of the **PETG** filaments I used, some also work with lower bed temperatures but 90C is a safe bet.
 
-UV light resistance is also better for **PETG** so it can be used for outdoor projects.
+**UV light** resistance is also better for **PETG** so it can be used for outdoor projects.
 
 > [PETG vs PLA: The Differences – Simply Explained](https://all3dp.com/2/petg-vs-pla-3d-printing-filaments-compared/)
 
