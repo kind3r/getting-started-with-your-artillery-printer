@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.home {
+  width: 230px;
+  position: fixed;
+  top: 190px;
+  left:50%;
+  margin-left:-580px;
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+  font-size: 14px;
+  line-height:24px;
+
+  &:hover { color: #999; }
+}
