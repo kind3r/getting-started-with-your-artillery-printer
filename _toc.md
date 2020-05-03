@@ -5,5 +5,4 @@
 - [The slicing software](slicer)
 - [Setting up your new Artillery 3D printer](setup) (calibration, bed leveling and first things to print) and what not to do
 - [Upgrades for your Artillery printer](upgrades) (parts and firmware)
-- Pimp up your artillery
-- Common issues and fixes
+- [Troubleshooting common issues and how to fix them](troubleshooting)

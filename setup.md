@@ -1,5 +1,6 @@
 ---
 title: Setting up your new Artillery 3D printer
+updated: 03-05-2020
 ---
 
 # Setting up your new Artillery 3D printer
