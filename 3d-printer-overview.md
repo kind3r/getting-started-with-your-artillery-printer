@@ -1,5 +1,6 @@
 ---
 title: "Anatomy of a 3D printer"
+updated: 03-05-2020
 ---
 # The 3D printer
 
