@@ -13,7 +13,7 @@ To be able to compute the list of moves required to create your 3D model in real
 
 After defining the layers **the slicer** analyses each layer and turns it into lines - the print moves. Since you can't really print into thin air, the slicer also needs to make some decisions while comparing the current layer to the previous one to be able to determine how to print a specific section of your model. If a section of your print is not directly above the previous layer the slicer can decide if it needs **supports** for that section, or if it's enough to just start printing on top of the previous layer and slowly move outside creating what are know as **overhangs**, or if it can just link two distant points with a mid air extrusion - **bridging**.
 
-While there are a lot of settings that can be made in the slicer below is an article containg a list of the most 8 important ones:
+While there are a lot of settings that can be made in the slicer below is an article containg a list of the most 8 important ones, more in detail later:
 
 > [3D Slicer Settings for Beginners – 8 Things You Need to Know](https://pinshape.com/blog/3d-slicer-settings-5-things-you-need-to-know-about-3d-printing-software/)
 
@@ -41,6 +41,15 @@ Here is a list of some of the other popular free slicers:
 - [MakerBot Print](https://www.makerbot.com/3d-printers/apps/makerbot-print/)
 
 > A more comprehensive list: [2020 Best 3D Printer Slicer Software](https://all3dp.com/1/best-3d-slicer-software-3d-printer/)
+
+## Overview of slicer settings
+
+Most slicers have their settings split into 3 sets of profiles:
+- **Machine** - 3D printer specific settings such as bed size, acceleration, jerk and speed limits, number of extruders, nozzle size etc.
+- **Material** - Material specific settings such as printing temperature, bed temperature, flow rate etc.
+- **Print** - Main settings like printing speed, acceleration and jerk, layer height, infill percentage, supports etc.
+
+
 
 **Next step**: [First things to do after unpacking your printer](setup)
 
