@@ -65,6 +65,11 @@ As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), 
 
 > Work in progress. Also touch on Klipper.
 
+
+## Other resources
+
+> A list of upgrades and replacement parts can be found on 3D Nexus' article [Artillery 3D Printers, Parts, Upgrades And Mods](https://3d-nexus.com/newsroom/fdm-printing/artillery-3d-printers-parts-upgrades-and-mods?fbclid=IwAR15y_IgitSDFj-ReUOPp1ZuJ7GZBjObifABdUXcDEhpicH2ia6ILlEDWO8)
+
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting)
 
 All topics:
