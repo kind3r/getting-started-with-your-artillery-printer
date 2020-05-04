@@ -129,11 +129,12 @@ I got started with **Prusa Slicer** because it felt more solid at that time, com
 To get started easier you can download a pre-made profile, this will give you some sensible defaults to get you started and then you can tune your settings from there after you get the hang of it.
 
 **Prusa Slicer**:
-- **3dprintbeginner** [Artillery Genius Profile for Simplify3D and Prusa Slicer](https://3dprintbeginner.com/artillery-genius-profile-for-simplify3d-and-prusa-slicer/) - this is the one I got started with.
-- **3D-nexus** [Artillery Sidewinder X1 And Genius: Prusa Slicer Settings Bundle UPDATED](https://3d-nexus.com/newsroom/news-announcements-m/artillery-sidewinder-x1-and-genius-prusa-slicer-settings-bundle-updated)
+> - **3dprintbeginner** [Artillery Genius Profile for Simplify3D and Prusa Slicer](https://3dprintbeginner.com/artillery-genius-profile-for-simplify3d-and-prusa-slicer/) - this is the one I got started with.
+
+> - **3D-nexus** [Artillery Sidewinder X1 And Genius: Prusa Slicer Settings Bundle UPDATED](https://3d-nexus.com/newsroom/news-announcements-m/artillery-sidewinder-x1-and-genius-prusa-slicer-settings-bundle-updated)
 
 **Cura**
-- **3D-nexus** [3DN Artillery SWX1 and Genius Cura 4.5 Machines and Profiles](https://3d-nexus.com/resources/file-archives/download/8-artillery-evnovo/14-3dn-artillery-swx1-and-genius-cura-4-5-machines-and-profiles)
+> - **3D-nexus** [3DN Artillery SWX1 and Genius Cura 4.5 Machines and Profiles](https://3d-nexus.com/resources/file-archives/download/8-artillery-evnovo/14-3dn-artillery-swx1-and-genius-cura-4-5-machines-and-profiles)
 
 ### Creating your own profile
 
@@ -208,15 +209,15 @@ Next thing I usually print is [calicat](https://www.thingiverse.com/thing:154591
 
 ## Your first useful print(s)
 
-Now that you got your first material tunned in you should definately print a strain relief for the bed cable as it's prety fragile.
+Now that you got your first material tunned in you should definately print a **strain relief for the bed cable** as it's prety fragile.
 
 > [Artillery Genius Bed Cable Strain Relief](https://www.thingiverse.com/thing:4056229) by fritz11 is the one I use.
 
-2nd most useful print is a cable relief for the belt going to the extruder as it moves a lot and has a tendency to get unplugged.
+2nd most useful print is a **cable relief for the ribbon** going to the extruder as it moves a lot and has a tendency to get unplugged.
 
 > I use the [Artillery Genius cable relief](https://www.thingiverse.com/thing:3998458) by ivan_lisi but there are also other versions out there.
 
-3rd print should be a dust filter for your filament. For that you also need a piece of dishwater sponge.
+3rd print should be a **dust filter** for your filament. For that you also need a piece of a clean dishwater sponge.
 
 > I use the [Filament Dust Filter](https://www.thingiverse.com/thing:190118) by sneakypoo
 
