@@ -21,11 +21,11 @@ So do yourself a favor and order some [good quality nozzles](3d-printer-overview
 
 ## A new fan shroud
 
-One thing that can influence the quality of your prints is the cooling. The default fan shroud is fine in most situations but it does have a small flow derived from the fact that it blows all the air from one direction. This will create more stringing on the back of your print when using materials such as PETG that loves to string. Replacing it with a fan that distributes the air flow from 2 directions will help reduce this stringing issue and improve the cooling of your part during the printing process.
+One thing that can influence the quality of your prints is the cooling. The **default fan shroud** is fine in most situations but it does have a small flow derived from the fact that it blows all the air from one direction. This will create more stringing on the back of your print when using materials such as PETG that loves to string. Replacing it with a fan that distributes the air flow from 2 directions will help reduce this stringing issue and improve the cooling of your part during the printing process.
 
-I am still experimenting with different fan designs but I still have not found a perfect one so I can't really make a recommendation here. But feel free to experiment with the designs you find on thingiverse and see what works for you. Just keep in mind that since the shroud will be close to the nozzle you have to print it in [PETG](materials#petg) or better yet [ABS or ASA](materials#abs-asa). 
+I am still experimenting with different shroud designs but I still have not found a perfect one so I can't really make a recommendation here. But feel free to experiment with the designs you find on thingiverse and see what works for you. Just keep in mind that since the shroud will be close to the nozzle you have to print it in [PETG](materials#petg) or better yet [ABS or ASA](materials#abs-asa). 
 
-> A good comparison between different fan shroud models can be found in the video [What is the BEST fan for your Sidewinder X1 3d printer?](https://youtu.be/27MnEC7ejzs). Some of them require a different fan tho.
+> A good comparison between different shroud models can be found in the video [What is the BEST fan for your Sidewinder X1 3d printer?](https://youtu.be/27MnEC7ejzs). Some of them require a different fan tho.
 
 ## Auto bed leveling
 
@@ -63,7 +63,7 @@ As mentioned in the [3d printer overview](3d-printer-overview) there are 2 compo
 
 ### Firmware options
 
-As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), Artillery printers run on **Marlin 1.x** firmware (1.1.9 to be more precise). Because the printers use an 8bit board there is no real advantage to using **Marlin 2.x** as all the features the board can use are implemented in the 1.x version.
+As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), Artillery printers run on **Marlin 1.x** firmware (1.1.9 to be more precise). Because the printers use an 8bit board there is no real advantage to using **Marlin 2.x** as all the features the board can handle are implemented in the 1.x version.
 
 > Work in progress. Also touch on Klipper.
 

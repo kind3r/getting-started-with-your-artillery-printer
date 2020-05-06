@@ -1,5 +1,3 @@
-M851 Z-1.48
-
 M104 S150                                   ; start heating the extruder a bit to save some time but not ooze
 M140 S{material_bed_temperature_layer_0}    ; heatbed temperature
 M190 S{material_bed_temperature_layer_0}    ; wait for the bed to heat up

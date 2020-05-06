@@ -1,6 +1,6 @@
 ---
 title: "Slicer PC sofware"
-updated: 03-05-2020
+updated: 06-05-2020
 ---
 # Slicer PC sofware
 
@@ -49,9 +49,66 @@ Here is a list of some of the other popular free slicers:
 
 Most slicers have their settings split into 3 sets of profiles:
 - **Machine** - 3D printer specific settings such as bed size, acceleration, jerk and speed limits, number of extruders, nozzle size etc.
-- **Material** - Material specific settings such as printing temperature, bed temperature, flow rate etc.
+- **Material** - Material specific settings such as printing temperature, bed temperature, cooling, flow rate etc.
 - **Print** - Main settings like printing speed, acceleration and jerk, layer height, infill percentage, supports etc.
 
+Slicers do a good job explaining what each setting does via tooltips or even via a plugin that provides very detailed explanations in case of **Cura**. So I'm not going to explain the settings themselfs just how they are organized and split between the 3 categories.
+
+### Machine settings
+
+This category applies to the printer itself and it includes things like size of the printing area, number of extruders, if the bed is heated or not, what is the maximum speed and acceleration for X, Y and Z movements, maximum extrusion speed, temperature limits, start and end g-code.
+
+Most of the settings are self explanatory and should be provided by the 3D printer manufacturer, so I will focus a bit on the **start and end g-code**. 
+
+In principle, **before** your print starts you want to perform the following actions:
+- Start preheating the nozzle to a standby temperature but don't wait for it to reach that temperature
+- Preheat bed and wait for it to reach it's temperature
+- Home your machine so that it knows where it's at
+- If you have a BLTouch or similar probe perform ABL
+- Move to one corner of the bed (I preffer 0/0/0)
+- Turn off the LED as it's really anoying
+- Preheat nozzle to first layer's printing temperature and wait for it to reach that temperature
+- Purge the nozzle (draw 2 lines for the full length of the bed so that material flows corectly when you start your print)
+
+Some of the steps like preheating to specified temperatures are usually also done by the slicer, but in case you have it in your startup g-code the slicer will skip that step and rely on your one g-code for preheating.
+
+At the end of your print you usually want to:
+- Retract a bit so that less material oozes
+- Move Z a bit higher
+- Move the bed forward so you have easy access to your print
+- Turn off fans, motors and heating
+
+### Material settings
+
+There are a lot of settings that are material dependent. The main ones are nozzle temperature for printing and first layer (sometimes you need more heat for the first layer to get better adhesion), bed temperature, cooling (maximum fan speed, if the fan needs to always be on, only start the fan after the first X layers etc.), flow rate (some materials have the tendency to under-extrude so you need to increase the flow of material to compensate).
+
+Other material specific settings are related to **retraction** (distance, speed and Z-hop/lift Z). This settings are aimed at preventing stringing and unwanted oozing during your print by quickly pulling the filament from the nozzle at the right time thus creating a negative pressure that will suck the melting filament from the tip of the nozzle. This move is usually acompanied by the Z axis moving up a bit so that the nozzle is pulled away from the print.
+
+**Linear advance** (if your firmware supports it) is another setting that is material dependent.
+
+**Bridging settings** (like the speed, flow and fan speed) are also dependent on the material you print. Bridges are basically air printing lines that link 2 printed parts (or parts of the same print), just like a bridge in real life links to banks of a river for example. Most materials (like PLA) preffer to be printed slower and with cooling at 100%.
+
+Via the [material settings plugin](https://marketplace.ultimaker.com/app/cura/plugins/fieldofview/MaterialSettingsPlugin) **Ultimaker Cura** allows you to add any of the settings to a material profile. For example you can have different retraction distance and speed that best suits the material. **Prusa Slicer** is not so flexible and gives you a hardcoded list of available material settings.
+
+### Print settings
+
+This settings are related to how and what you want to print. You want more detail on your 3D printed model ? Go with smaller layer height, line width and slower speed, use more walls (external perimeters). You want to print faster ? Increase the speed, use a bigger layer height, line width etc.
+
+**Line width** is the width of the line used in prinding your model. You would expect it to be sa same size as your nozzle, but it can also be set wider or narrower. Using a wider **line width** alows you to print faster while using a narrower line width alows for more precision. The difference between the nozzle size and the line width can be set as high as +/- 15% of the nozzle size.
+
+In most slicers you can specify the **number of solid walls/shells** for external, top and bottom of the part. Keep in mind that this is basically the number of lines (or layers) so the thickness of the wall itself is dependent on the line width for external walls and the layer size for top and bottom walls. This is why in **Cura** you can specify how to build walls using their number or by specifying the desired thickness.
+
+> Thou shall not escape the seam !
+
+**The seam** is the place where the printing goes from one layer to another. This usually leaves a mark on your 3D print. You cannot avoid this, but you can hide it between the details of your model. **Seam position** setting alows you to place your seam in a fixed position or let the slicer put it where it thinks it's best. Crossing from one layer to another does not have to happen in the same position from top to bottom of your print so the seam does not have to be in the same place all the time.
+
+**Infill percentage** determines how much of the inside of your 3D printed model needs to be filled with a pattern of your choice. This adds to the strength of your part, but only up to a certain level. Going over 15-20% infill does not provide a real strength advantage but only ads to your print time. You can make your print stronger by adding **solid walls/shells**. There are many infill patterns available, some print faster, some take longer to print, my favourite is gyroid but feel free to experiment.
+
+The **skirt** provides a way to purge your nozzle from partial oozed material during your previous print. I prefer to use a dedicated purge line in my startup g-code as this skirt has the tendency not to stick properly due to the bad initial extrusion which we are trying to avoid anyway, thus it can be dragged along to your main print.
+
+The **brim** provides extends the suroundings of your model's first layer and provides better bed adeshion especially in case the model has small points of contact with the bed.
+
+**Support material** can be generated to be used ... well, to support printing parts of your model that would otherwise be unprintable.
 
 
 **Next step**: [First things to do after unpacking your printer](setup)
