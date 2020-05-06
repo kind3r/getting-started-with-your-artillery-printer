@@ -134,7 +134,7 @@ To get started easier you can download a pre-made profile, this will give you so
 > - **3D-nexus** [Artillery Sidewinder X1 And Genius: Prusa Slicer Settings Bundle UPDATED](https://3d-nexus.com/newsroom/news-announcements-m/artillery-sidewinder-x1-and-genius-prusa-slicer-settings-bundle-updated)
 
 **Cura**
-> - **3D-nexus** [3DN Artillery SWX1 and Genius Cura 4.5 Machines and Profiles](https://3d-nexus.com/resources/file-archives/download/8-artillery-evnovo/14-3dn-artillery-swx1-and-genius-cura-4-5-machines-and-profiles)
+> - **3D-nexus** [3DN Artillery SWX1 and Genius Cura 4.6.1 Machines and Profiles Installation Package Released!](https://3d-nexus.com/newsroom/news-announcements-m/3dn-artillery-swx1-and-genius-cura-4-6-1-machines-and-profiles-installation-package-released)
 
 ### Creating your own profile
 
