@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 04-05-2020
+updated: 06-05-2020
 ---
 
 # Upgrades for your Artillery printer
@@ -71,6 +71,8 @@ As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), 
 ## Other resources
 
 > A list of upgrades and replacement parts can be found on 3D Nexus' article [Artillery 3D Printers, Parts, Upgrades And Mods](https://3d-nexus.com/newsroom/fdm-printing/artillery-3d-printers-parts-upgrades-and-mods?fbclid=IwAR15y_IgitSDFj-ReUOPp1ZuJ7GZBjObifABdUXcDEhpicH2ia6ILlEDWO8)
+
+> 3dprintbeginner's pick at his favourite upgrades [Sidewinder X1 Upgrades – Paid and Free](https://3dprintbeginner.com/sidewinder-x1-upgrades/)
 
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting)
 
