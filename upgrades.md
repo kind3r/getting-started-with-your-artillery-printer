@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 07-05-2020
+updated: 08-05-2020
 ---
 
 # Upgrades for your Artillery printer
@@ -33,7 +33,7 @@ There is some controversy regarding the benefit of adding a bed probe like the [
 
 Adding a bed probe unfortunately is not a straight forward process and requires a firmware update for both the mainboard and the TFT.
 
-> **Steve Wagg** has an excelent tutorial on installing [BLTouch - Waggster Mod on a Artillery Sidewinder X1 3D Printer](https://youtu.be/ynm8inRMVkE). The **Genius** already has a plug on the extruder (behind the blue cover) so you don't need to reuse the LED pins. You should watch his video a few times before getting started to make sure you understand the whole process.
+> **Steve Wagg** has an excelent tutorial on installing [BLTouch - Waggster Mod on a Artillery Sidewinder X1 3D Printer](https://youtu.be/ynm8inRMVkE). The **Genius** already has a plug on the extruder (behind the blue cover) so you don't have to reuse the LED pins. You should watch his video a few times before getting started to make sure you understand the whole process.
 
 ## OctoPrint
 
@@ -57,16 +57,68 @@ I built myself an adapted version of the [Original Prusa i3 MK3 ENCLOSURE - Ikea
 
 ## Upgrade your firmware
 
-As mentioned in the [3d printer overview](3d-printer-overview) there are 2 components (the mainboard and the TFT) that work independently and have separate firmwares and only communicate via a serial port which is also shared with the external USB of the mainboard. **This shared serial port design unfortunately blocks the USB firmware upgrade process for the mainboard**.
+As mentioned in the [3d printer overview](3d-printer-overview) there are 2 components (the mainboard and the TFT) that work independently and have separate firmwares and only communicate with each other via a serial port which is also shared with the external USB of the mainboard. **This shared serial port design unfortunately blocks the USB firmware upgrade process for the mainboard**. 
+
+In order to update your mainboad's firmware you need to open the printer and disconnect your TFT from the mainboard by unpluging it's ribbon cable at one of the ends (whichever one has less glue on it). After that you connect your printer to a PC and use **Prusa Slicer** to upload the .hex firmware to the mainboard.
+
+The TFT can be updated via a SD Card (16Gb or less), so it's a bit easier. 
+
+**Do not upgrade your firmware until your machine is fully functional using the firmware it came with**. Upgrading the firmware will not solve your problems with the machine (if you have any).
 
 ### Reasons to upgrade your firmware
+
+Main reason you want to upgrade your firmware are the new features. While there are not many radical improvements from the stock firmware there are a few quality of life ones.
+
+- **Save to EEPROM** - gives you the ability to persist your settings across printer reboots. This includes your E-steps, PID tunning, max speed and acceleration, default acceleration and jerk so that you don't have to include those settings in your slicer each and every time, especially when changing from one slicer to another.
+- **Babystepping** - enables real-time movement of the axes by tiny increments without changing the current position value. This is useful during the first layer to adjust for a slightly missaligned bed leveling
+- **Linear advance** - gives you the posibility to reduce the extrusion just before changing directions while printing. Because of inertia, the extruder cannot change directions and speed instantenously, it needs to slow down and accelerate again. This is especially obvious on sharp edges where the printer has to change direction by 90 degrees or more. Because the extrusion is constant, this slowdown followed by acceleration leaves a bit more material than it's supposed to be on and around that sharp edge. Read more about [linear advance](https://marlinfw.org/docs/features/lin_advance.html).
+- **Auto Bed Level** via [BLTouch](https://www.antclabs.com/bltouch) or other bed probes.
+- **Mesh Bed Leveling** - for manually creating a mesh used to compensate for uneven beds, in case you don't want to install a probe.
 
 ### Firmware options
 
 As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), Artillery printers run on **Marlin 1.x** firmware (1.1.9 to be more precise). Because the printers use an 8bit board there is no real advantage to using **Marlin 2.x** as all the features the board can handle are implemented in the 1.x version.
 
-> Work in progress. Also touch on Klipper.
+> Great article explaining why Marlin 1.x is enough for our printers: [Artillery X1 and Genius: Why Haven't I Done a Marlin 2.x.x Firmware yet? ABL Sensors?](https://3d-nexus.com/newsroom/news-announcements-m/artillery-x1-and-genius-why-havent-i-done-a-marlin-2-x-x-firmware-yet)
 
+Here are several firmware available, all based on **Marlin**. Most of them include an instalation guide and also a TFT firmware companion. I will try to keep this list as up-to-date as possible, but it's better check on each site what each firmware has to offer.
+
+[3D-Nexus (3DN) Printer firmware for Sidewinder X1 and Genius](https://3d-nexus.com/resources/file-archives/category/5-printer-firmware)
+- Marlin 1.1.9
+- Save to EEPROM
+- Linear advance
+- Babystepping
+- Mesh Bed Leveling
+
+[3dprintbeginner Artillery Sidewinder Firmware](https://3dprintbeginner.com/sidewinder-x1-firmware/)  
+[3dprintbeginner Artillery Genius Firmware](https://3dprintbeginner.com/artillery-genius-firmware/)  
+- Marin 2.0.5.3
+- Save to EEPROM
+- Linear advance
+- Babystepping
+- S-Curve Acceleration, Adaptive Step Smoothing and Quick Home
+
+[Waggster Firmware for Artillery Sidewinder](https://pretendprusa.co.uk/index.php?topic=30.0)  
+[Waggster Firmware for Artillery Genius](https://pretendprusa.co.uk/index.php?action=downloads;cat=8)  
+- Marlin 2.0.2
+- Save to EEPROM
+- Linear advance
+- Babystepping
+- Bilinear Auto Bed Level for BLTouch (or compatible) probes
+
+[Firmware that I use for my Artillery Genius](https://github.com/kind3r/genius-firmware/releases) (more or less same as Waggster but on Marlin 1.x and with my own personal tweaks)
+- Marlin 1.1.9 (from Artillery)
+- Save to EEPROM
+- Linear advance
+- Babystepping
+- Bilinear Auto Bed Level for BLTouch (or compatible) probes
+- Lower max speeds, acceleration and jerk
+- Lower default acceleration
+- You can use the TFT firmware from Waggster's version
+
+[Original Artillery Sidewinder Firmware (source code only)](https://github.com/artillery3d/sidewinder-x1-firmware)
+[Original Artillery Genius Firmware (source code only)](https://github.com/artillery3d/genius-firmware)
+- The default firmware of the printer
 
 ## Other resources
 
@@ -79,6 +131,29 @@ As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), 
 > International: [https://www.happy3dthai-artillery.com/](https://www.happy3dthai-artillery.com/)
 
 > Europe: [https://3dprinterdele.dk/](https://3dprinterdele.dk/)
+
+### More learning resources
+
+**Youtube channels**:
+> [Maker's Muse](https://www.youtube.com/channel/UCxQbYGpbdrh-b2ND-AfIybg)
+
+> [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A)
+
+> [CNC Kitchen](https://www.youtube.com/channel/UCiczXOhGpvoQGhOL16EZiTg)
+
+> [Hobby Hoarder](https://www.youtube.com/channel/UCJzj8WPo-qOnIK1UHEiLRKQ)
+
+**Websites**:
+> [3dprintbeginner](https://3dprintbeginner.com/)
+
+> [All3DP](https://all3dp.com/)
+
+> [Simplify 3D - Print Quality Troubleshooting Guide](https://www.simplify3d.com/support/print-quality-troubleshooting/)
+
+> [3D Beginners](https://www.3dbeginners.com/)
+
+> [Let's Print 3D](https://letsprint3d.net/)
+
 
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting)
 
