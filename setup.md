@@ -129,12 +129,12 @@ I got started with **Prusa Slicer** because it felt more solid at that time, com
 To get started easier you can download a pre-made profile, this will give you some sensible defaults to get you started and then you can tune your settings from there after you get the hang of it.
 
 **Prusa Slicer**:
-> - **3dprintbeginner** [Artillery Genius Profile for Simplify3D and Prusa Slicer](https://3dprintbeginner.com/artillery-genius-profile-for-simplify3d-and-prusa-slicer/) - this is the one I got started with.
+> **3dprintbeginner** [Artillery Genius Profile for Simplify3D and Prusa Slicer](https://3dprintbeginner.com/artillery-genius-profile-for-simplify3d-and-prusa-slicer/) - this is the one I got started with.
 
-> - **3D-nexus** [Artillery Sidewinder X1 And Genius: Prusa Slicer Settings Bundle UPDATED](https://3d-nexus.com/newsroom/news-announcements-m/artillery-sidewinder-x1-and-genius-prusa-slicer-settings-bundle-updated)
+> **3D-Nexus** [Artillery Sidewinder X1 And Genius: Prusa Slicer Settings Bundle UPDATED](https://3d-nexus.com/newsroom/news-announcements-m/artillery-sidewinder-x1-and-genius-prusa-slicer-settings-bundle-updated)
 
 **Cura**
-> - **3D-nexus** [3DN Artillery SWX1 and Genius Cura 4.6.1 Machines and Profiles Installation Package Released!](https://3d-nexus.com/newsroom/news-announcements-m/3dn-artillery-swx1-and-genius-cura-4-6-1-machines-and-profiles-installation-package-released)
+> **3D-Nexus** [3DN Artillery SWX1 and Genius Cura 4.6.1 Machines and Profiles Installation Package Released!](https://3d-nexus.com/newsroom/news-announcements-m/3dn-artillery-swx1-and-genius-cura-4-6-1-machines-and-profiles-installation-package-released)
 
 ### Creating your own profile
 
@@ -220,6 +220,12 @@ Now that you got your first material tunned in you should definately print a **s
 3rd print should be a **dust filter** for your filament. For that you also need a piece of a clean dishwater sponge.
 
 > I use the [Filament Dust Filter](https://www.thingiverse.com/thing:190118) by sneakypoo
+
+___
+You can no go ahead and print that Benchy you always wanted.
+
+![Marvin riding a Benchy](img/Marvin-Benchy.jpg)
+*(Benchy printed in [Polymaker's Polysmooth](https://eu.polymaker.com/product/polysmooth/))*
 
 **Next step**: [Tips and tricks](tips)
 

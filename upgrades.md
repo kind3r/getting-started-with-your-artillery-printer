@@ -83,6 +83,7 @@ As explained in the [3D printer overview](3d-printer-overview#marlin-firmware), 
 
 Here are several firmware available, all based on **Marlin**. Most of them include an instalation guide and also a TFT firmware companion. I will try to keep this list as up-to-date as possible, but it's better check on each site what each firmware has to offer.
 
+___ 
 [3D-Nexus (3DN) Printer firmware for Sidewinder X1 and Genius](https://3d-nexus.com/resources/file-archives/category/5-printer-firmware)
 - Marlin 1.1.9
 - Save to EEPROM
@@ -90,6 +91,7 @@ Here are several firmware available, all based on **Marlin**. Most of them inclu
 - Babystepping
 - Mesh Bed Leveling
 
+___
 [3dprintbeginner Artillery Sidewinder Firmware](https://3dprintbeginner.com/sidewinder-x1-firmware/)  
 [3dprintbeginner Artillery Genius Firmware](https://3dprintbeginner.com/artillery-genius-firmware/)  
 - Marin 2.0.5.3
@@ -98,6 +100,7 @@ Here are several firmware available, all based on **Marlin**. Most of them inclu
 - Babystepping
 - S-Curve Acceleration, Adaptive Step Smoothing and Quick Home
 
+___
 [Waggster Firmware for Artillery Sidewinder](https://pretendprusa.co.uk/index.php?topic=30.0)  
 [Waggster Firmware for Artillery Genius](https://pretendprusa.co.uk/index.php?action=downloads;cat=8)  
 - Marlin 2.0.2
@@ -106,6 +109,7 @@ Here are several firmware available, all based on **Marlin**. Most of them inclu
 - Babystepping
 - Bilinear Auto Bed Level for BLTouch (or compatible) probes
 
+___
 [Firmware that I use for my Artillery Genius](https://github.com/kind3r/genius-firmware/releases) (more or less same as Waggster but on Marlin 1.x and with my own personal tweaks)
 - Marlin 1.1.9 (from Artillery)
 - Save to EEPROM
@@ -116,9 +120,12 @@ Here are several firmware available, all based on **Marlin**. Most of them inclu
 - Lower default acceleration
 - You can use the TFT firmware from Waggster's version
 
+___
 [Original Artillery Sidewinder Firmware (source code only)](https://github.com/artillery3d/sidewinder-x1-firmware)
 [Original Artillery Genius Firmware (source code only)](https://github.com/artillery3d/genius-firmware)
 - The default firmware of the printer
+
+___
 
 ## Other resources
 
