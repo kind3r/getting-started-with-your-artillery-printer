@@ -221,7 +221,7 @@ Now that you got your first material tunned in you should definately print a **s
 
 > I use the [Filament Dust Filter](https://www.thingiverse.com/thing:190118) by sneakypoo
 
-**Next step**: [Upgrades for your Artillery printer](upgrades)
+**Next step**: [Tips and tricks](tips)
 
 All topics:
 {% include_relative _toc.md %}
