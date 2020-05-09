@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 08-05-2020
+updated: 09-05-2020
 ---
 
 # Upgrades for your Artillery printer
@@ -138,29 +138,6 @@ ___
 > International: [https://www.happy3dthai-artillery.com/](https://www.happy3dthai-artillery.com/)
 
 > Europe: [https://3dprinterdele.dk/](https://3dprinterdele.dk/)
-
-### More learning resources
-
-**Youtube channels**:
-> [Maker's Muse](https://www.youtube.com/channel/UCxQbYGpbdrh-b2ND-AfIybg)
-
-> [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A)
-
-> [CNC Kitchen](https://www.youtube.com/channel/UCiczXOhGpvoQGhOL16EZiTg)
-
-> [Hobby Hoarder](https://www.youtube.com/channel/UCJzj8WPo-qOnIK1UHEiLRKQ)
-
-**Websites**:
-> [3dprintbeginner](https://3dprintbeginner.com/)
-
-> [All3DP](https://all3dp.com/)
-
-> [Simplify 3D - Print Quality Troubleshooting Guide](https://www.simplify3d.com/support/print-quality-troubleshooting/)
-
-> [3D Beginners](https://www.3dbeginners.com/)
-
-> [Let's Print 3D](https://letsprint3d.net/)
-
 
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting)
 

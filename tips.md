@@ -1,6 +1,6 @@
 ---
 title: Tips and tricks for 3D printing
-updated: 08-05-2020
+updated: 09-05-2020
 ---
 # Tips and tricks
 
@@ -41,6 +41,32 @@ One of the common issues is that **the bed does not heat evenly**. This is becau
 ## Keep your filament dry
 
 As explained in the [materials section](materials) wet filament is very bad. Some materials absorb moisture from the air faster than others, but in the end they all do sooner or later. It's a good practice to keep your materials in ziplock bags (like the one you can find at Ikea), togheter with some [silica gel](https://en.wikipedia.org/wiki/Silica_gel) packs. I also recomend you get yourself a cheap [food dehydrator and transform it into a filament dryer](materials#water-is-bad) as it's worth every penny. An alternative solution would be to dry your spools in the oven, but I don't really advice doing that since most ovens are not really that precise with the temperature plus the plastic fumes can be harmful for your health in the long run.
+
+## Knowledge is power
+
+With 3D printing you learn something new every day. Here are some interesting YouTube channels to follow and some websites to read to find out more about 3D printing in general, materials, hardware upgrades and interesting stuff you can 3D print:
+
+**Youtube channels**:
+> [Maker's Muse](https://www.youtube.com/channel/UCxQbYGpbdrh-b2ND-AfIybg)
+
+> [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A)
+
+> [CNC Kitchen](https://www.youtube.com/channel/UCiczXOhGpvoQGhOL16EZiTg)
+
+> [Hobby Hoarder](https://www.youtube.com/channel/UCJzj8WPo-qOnIK1UHEiLRKQ)
+
+> [Chris's Basement](https://www.youtube.com/channel/UCqRiv7rQuxge63bqJ2hVNUQ)
+
+**Websites**:
+> [3dprintbeginner](https://3dprintbeginner.com/)
+
+> [All3DP](https://all3dp.com/)
+
+> [Simplify 3D - Print Quality Troubleshooting Guide](https://www.simplify3d.com/support/print-quality-troubleshooting/)
+
+> [3D Beginners](https://www.3dbeginners.com/)
+
+> [Let's Print 3D](https://letsprint3d.net/)
 
 
 **Next step**: [Upgrades for your Artillery printer](upgrades)
