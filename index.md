@@ -1,6 +1,7 @@
 ---
 title: "Getting started with your Artillery 3D printer"
 updated: 03-05-2020
+image: /img/SocialPreview.png
 ---
 # Getting started with your 3D printer
 
