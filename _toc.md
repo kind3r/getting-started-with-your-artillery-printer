@@ -1,4 +1,4 @@
-- [Introduction](index)
+- [Introduction](/)
 - [How 3D printing works](understanding-3d-printing)
 - [Overview of a 3D printer](3d-printer-overview)
 - [Printing materials](materials)
@@ -6,4 +6,4 @@
 - [Setting up your new 3D printer](setup)
 - [Tips and tricks](tips)
 - [Upgrades for your Artillery printer](upgrades) (spare parts and firmware)
-- [Troubleshooting common issues and how to fix them](troubleshooting)
+- [Troubleshooting common issues and possible fixes](troubleshooting)

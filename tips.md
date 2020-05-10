@@ -1,6 +1,6 @@
 ---
 title: Tips and tricks for 3D printing
-updated: 09-05-2020
+updated: 10-05-2020
 ---
 # Tips and tricks
 
@@ -40,7 +40,7 @@ One of the common issues is that **the bed does not heat evenly**. This is becau
 
 ## Keep your filament dry
 
-As explained in the [materials section](materials) wet filament is very bad. Some materials absorb moisture from the air faster than others, but in the end they all do sooner or later. It's a good practice to keep your materials in ziplock bags (like the one you can find at Ikea), togheter with some [silica gel](https://en.wikipedia.org/wiki/Silica_gel) packs. I also recomend you get yourself a cheap [food dehydrator and transform it into a filament dryer](materials#water-is-bad) as it's worth every penny. An alternative solution would be to dry your spools in the oven, but I don't really advice doing that since most ovens are not really that precise with the temperature plus the plastic fumes can be harmful for your health in the long run.
+As explained in the [materials section](materials) wet filament is very bad. Some materials absorb moisture from the air faster than others, whith nylon being the champion of [hygroscopicity](https://en.wikipedia.org/wiki/Hygroscopy) (if that's even a word), but in the end they all do sooner or later. It's a good practice to keep your materials in ziplock bags (like the one you can find at Ikea), togheter with some [silica gel](https://en.wikipedia.org/wiki/Silica_gel) packs. I also recomend you get yourself a cheap [food dehydrator and transform it into a filament dryer](materials#water-is-bad) as it's worth every penny. An alternative solution would be to dry your spools in the oven, but I don't really advice doing that since most ovens are not really that precise with the temperature plus the plastic fumes can be harmful for your health in the long run.
 
 ## Knowledge is power
 

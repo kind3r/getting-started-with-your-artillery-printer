@@ -64,7 +64,7 @@ As **PLA** has a wide range of printing temperature, do not be afraid to experim
 
 The next material you might be interested in printing is the PET family, most specifically **PETG**. It has a higher **glass transition** temperature of around 75C and improved physical strength compared to PLA.
 
-Printing **PETG** requires higher temperatures than **PLA** and bed adhesion can be more tricky. For me 90C on the bed works fine for most of the **PETG** filaments I used, some also work with lower bed temperatures but 90C is a safe bet.
+Printing **PETG** requires higher temperatures than **PLA** and bed adhesion can be more tricky. For me 90-95C on the bed works fine for most of the **PETG** filaments I used, some also work with lower bed temperatures but 90C is a safe bet.
 
 **UV light** resistance is also better for **PETG** so it can be used for outdoor projects.
 
