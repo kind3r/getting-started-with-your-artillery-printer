@@ -53,10 +53,3 @@ If all else fails ...
 
 > [Artillery github](https://github.com/artillery3d) - Firmware source code
 
-
-
-> Work in progress
-
-
-All topics:
-{% include_relative _toc.md %}

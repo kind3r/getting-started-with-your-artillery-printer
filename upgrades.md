@@ -151,5 +151,3 @@ If your a bit OCD like me and like to keep things organized, you can print yours
 
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting)
 
-All topics:
-{% include_relative _toc.md %}

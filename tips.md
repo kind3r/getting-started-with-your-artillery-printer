@@ -70,6 +70,3 @@ With 3D printing you learn something new every day. Here are some interesting Yo
 
 
 **Next step**: [Upgrades for your Artillery printer](upgrades)
-
-All topics:
-{% include_relative _toc.md %}

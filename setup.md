@@ -229,5 +229,3 @@ You can no go ahead and print that Benchy you always wanted.
 
 **Next step**: [Tips and tricks](tips)
 
-All topics:
-{% include_relative _toc.md %}

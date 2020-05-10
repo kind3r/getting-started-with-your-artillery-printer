@@ -186,5 +186,3 @@ In case of Artillery a MKS TFT28 is used which recently got open sourced, but th
 
 **Next step**: [Printing materials](materials)
 
-All topics:
-{% include_relative _toc.md %}

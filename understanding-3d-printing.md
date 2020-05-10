@@ -23,5 +23,3 @@ A good video overview of the whole process is [3D printing 101 - The FFF 3D Prin
 
 **Next step**: [Overview of a 3D printer](3d-printer-overview)
 
-All topics:
-{% include_relative _toc.md %}

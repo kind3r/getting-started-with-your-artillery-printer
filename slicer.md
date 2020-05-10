@@ -113,5 +113,3 @@ The **brim** provides extends the suroundings of your model's first layer and pr
 
 **Next step**: [First things to do after unpacking your printer](setup)
 
-All topics:
-{% include_relative _toc.md %}

@@ -100,5 +100,3 @@ There are a lot of materials out there with different structural or visual effec
 
 **Next step**: [Role of the slicing software](slicer)
 
-All topics:
-{% include_relative _toc.md %}
