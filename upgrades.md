@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 09-05-2020
+updated: 10-05-2020
 ---
 
 # Upgrades for your Artillery printer
@@ -126,6 +126,16 @@ ___
 - The default firmware of the printer
 
 ___
+
+## Labels for your cables
+
+If your a bit OCD like me and like to keep things organized, you can print yourself some lables that can be atached to the cables inside your 3D printer to make them more easy to recognize so you don't mix them up. Here are some of the options:
+
+> [Stepper Motor Cable Mark](https://www.thingiverse.com/thing:3627558) by xDOOTx
+
+> [Cable Clips](https://www.thingiverse.com/thing:2070838) by pcsentinel
+
+> [Multimaterial Cable Clips](https://www.thingiverse.com/thing:3350640) by JuanPuchol
 
 ## Other resources
 
