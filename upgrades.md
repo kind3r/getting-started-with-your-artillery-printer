@@ -35,6 +35,10 @@ Adding a bed probe unfortunately is not a straight forward process and requires 
 
 > **Steve Wagg** has an excelent tutorial on installing [BLTouch - Waggster Mod on a Artillery Sidewinder X1 3D Printer](https://youtu.be/ynm8inRMVkE). The **Genius** already has a plug on the extruder (behind the blue cover) so you don't have to reuse the LED pins. You should watch his video a few times before getting started to make sure you understand the whole process.
 
+![Genius BLTouch pins](img/Genius-BLT-pins.png)
+
+One thing you have to be careful about on the **Genius** is how you connect the probe wires to the plug. Pinout is explained in the [Artillery Genius ABL Port](doc/20191025145855-ABL_Pins.pdf) PDF provided by Artillery. Your probe has 5 wires usually grouped into 2 connectors, one with 2 wires (normally black and white) and another one with 3 wires. The order of the wires in the plug on the extruder board has to be the same as the order of the small plug that goes on the back of your probe. For some reason on my 3D Touch clone wires number 4 and 5 were reversed in the connector so I had to switch them.
+
 ## OctoPrint
 
 *Has the process of moving SDCards from your computer to the printer and viceversa tired you out ?* 
