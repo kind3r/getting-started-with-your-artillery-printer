@@ -1,3 +1,7 @@
+---
+sitemap:
+  exclude: 'yes'
+---
 # Artillery parts specs
 
 ## Mainboard

@@ -1,6 +1,8 @@
 ---
 title: Upgrade Artillery Genius to a MKS SGEN L 32bit board
 updated: 09-05-2020
+sitemap:
+  exclude: 'yes'
 ---
 # Upgrade to a MKS SGEN L 32bit board
 
