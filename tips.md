@@ -69,4 +69,4 @@ With 3D printing you learn something new every day. Here are some interesting Yo
 > [Let's Print 3D](https://letsprint3d.net/)
 
 
-**Next step**: [Upgrades for your Artillery printer](upgrades)
+**Next step**: [Upgrades for your Artillery printer](upgrades.html)

@@ -111,5 +111,5 @@ The **brim** provides extends the suroundings of your model's first layer and pr
 **Support material** can be generated to be used ... well, to support printing parts of your model that would otherwise be unprintable.
 
 
-**Next step**: [First things to do after unpacking your printer](setup)
+**Next step**: [Setting up your new 3D printer](setup.html)
 

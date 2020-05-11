@@ -98,5 +98,5 @@ Third, it requires higher printing temperatures so an **all metal heatbreak** is
 
 There are a lot of materials out there with different structural or visual effects. As soon as you master the basics of using **PLA** and **PETG** don't be afraid to experiment with other materials.
 
-**Next step**: [Role of the slicing software](slicer)
+**Next step**: [Role of the slicing software](slicer.html)
 

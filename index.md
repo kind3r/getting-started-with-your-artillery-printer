@@ -23,4 +23,4 @@ If you don't take time to understand how the whole 3D printing process works, fi
 
 Reading all this will help you understand all the actors involved in the 3D printing so that when you run into an issue, if you can't figure it out yourself you can at least ask a more experienced user the right questions.
 
-**Next step**: [How 3D printing works](understanding-3d-printing)
+**Next step**: [How 3D printing works](understanding-3d-printing.html)

@@ -184,5 +184,5 @@ The independent ones like the MKS, BTT etc. are basically a separate device (als
 In case of Artillery a MKS TFT28 is used which recently got open sourced, but the amount of customisation for this kind of device is limited at the moment to the icons and the 7 commands in the Tools -> More menu.
 
 
-**Next step**: [Printing materials](materials)
+**Next step**: [Printing materials](materials.html)
 

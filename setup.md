@@ -227,5 +227,5 @@ You can no go ahead and print that Benchy you always wanted.
 ![Marvin riding a Benchy](img/Marvin-Benchy.jpg)
 *(Benchy printed in [Polymaker's Polysmooth](https://eu.polymaker.com/product/polysmooth/))*
 
-**Next step**: [Tips and tricks](tips)
+**Next step**: [Tips and tricks](tips.html)
 
