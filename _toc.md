@@ -1,8 +1,3 @@
----
-sitemap:
-  exclude: 'yes'
----
-- [Introduction](/)
 - [How 3D printing works](understanding-3d-printing)
 - [Overview of a 3D printer](3d-printer-overview)
 - [Printing materials](materials)
