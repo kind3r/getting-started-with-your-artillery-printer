@@ -16,7 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
-
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=256579135705218&autoLogAppEvents=1"></script>
+      
       <header>
         <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
         <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
@@ -53,7 +55,7 @@
       </nav>
       <section>
         {{ content }}
-
+        <div class="fb-comments" data-href="{{ page.url }}" data-numposts="5" data-width="100%" data-order-by="social"></div>
       </section>
       <footer>
         {% if page.updated %}
