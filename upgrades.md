@@ -39,6 +39,25 @@ Adding a bed probe unfortunately is not a straight forward process and requires 
 
 One thing you have to be careful about on the **Genius** is how you connect the probe wires to the plug. Pinout is explained in the [Artillery Genius ABL Port](doc/20191025145855-ABL_Pins.pdf) PDF provided by Artillery. Your probe has 5 wires usually grouped into 2 connectors, one with 2 wires (normally black and white) and another one with 3 wires. The order of the wires in the plug on the extruder board has to be the same as the order of the small plug that goes on the back of your probe. For some reason on my 3D Touch clone wires number 4 and 5 were reversed in the connector so I had to switch them.
 
+Another thing that might be confusing for beginers when setting up a probe is understanding the **Z-Offset** and how to choose the apropiate value. **The probe** (a BLTouch clone in our example) has a **pin** that retracts when touches the bed and triggers a signal similar to an endstop. That is what the printer thinks is the zero **point on the Z axis** (remember how [the printer only knows where it is based on a reference point](3d-printer-overview.html) ?). 
+
+![BLTouch Z-offset](img/Genius-BLT-offset.png)
+
+**The distance between the probe's trigger point and the actual position of the nozzle is the Z-Offset**. It is always a negative number as it needs to lower the nozzle, basically substracting that value from the coordinates in your G-code file. For example if you have a Z-offset of -1.5 and you want to move your nozzle to print the first layer at 0.2mm, you would issue the command to move at **Z = 0.2** but the printer will actually move at **Z = 0.2 - 1.5 = -1.3**.
+
+As you saw in Steve Wagg's video, you need to make your initial adjustment while heated to your preffered temperature (I recommend using **210C** since it's most common for PLA) using the TFT commands and then save the new Z-Offset to EEPROM. This makes it easier than guessing it. But it might still not be enough and you would need to adjust it manually especially when changing printing temperatures, just like you would with [regular bed leveling](3d-printer-overview.html#a-leveled-bed-provides-good-adhesion-and-even-layers) because the whole heatblock expands and that will make the Z-offset smaller if you increase the temperature or bigger if you decrease it from the reference temperature you initially calibrated at. To view your current Z-Offset you can use any terminal (like Pronterface or OctoPrint's terminal), issue an `M503` and look for the **Z-Probe Offset M851**.
+
+```
+Send: M503
+...
+Recv: echo:; Z-Probe Offset (mm):
+Recv: echo:  M851 X28.00 Y-33.00 Z-1.50
+```
+
+Based on my experience I noticed that there is a difference of more or less **0.0035mm for each 1C** of temperature difference. So for example if you calibrated at **210C** and you want to print something at **240C**, you have a difference of **30C** so that would mean you have to add **30 * 0.0035 = 0.105** to your Z-Offset making it **-1.5 + 0.105 = -1.395** or rounded -1.39 or -1.40. While it won't make much of a difference for +/-10C you can see that for 30C it's half a layer size of 0.2mm and that will count. Of course your results might vary depending on your nozzle and heatblock materials if you upgraded from the original ones, and also some materials preffer to be closer to the bed while others a bit further away, so feel free to experiment with the offset.
+
+To set a new offset you can use `M851 Z-1.70` (replace -1.70 with the new offset of course). You can put that in your startup G-code for the filament for **Prusa Slicer** or use a plugin like [Z Offset Setting](https://marketplace.ultimaker.com/app/cura/plugins/fieldofview/ZOffsetPlugin) in **Ultimaker Cura**.
+
 ## OctoPrint
 
 *Has the process of moving SDCards from your computer to the printer and viceversa tired you out ?* 
