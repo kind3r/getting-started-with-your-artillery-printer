@@ -55,7 +55,8 @@
       </nav>
       <section>
         {{ content }}
-        <div class="fb-comments" data-href="{{ page.url }}" data-numposts="5" data-width="100%" data-order-by="social"></div>
+        <hr>
+        <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-numposts="5" data-width="100%" data-order-by="social"></div>
       </section>
       <footer>
         {% if page.updated %}
