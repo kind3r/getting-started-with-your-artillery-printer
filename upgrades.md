@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 10-05-2020
+updated: 14-05-2020
 ---
 
 # Upgrades for your Artillery printer
@@ -144,11 +144,34 @@ ___
 - You can use the TFT firmware from Waggster's version
 
 ___
-[Original Artillery Sidewinder Firmware (source code only)](https://github.com/artillery3d/sidewinder-x1-firmware)
-[Original Artillery Genius Firmware (source code only)](https://github.com/artillery3d/genius-firmware)
+[Original Artillery Sidewinder Firmware](https://github.com/artillery3d/sidewinder-x1-firmware) (source code only)
+
+[Original Artillery Genius Firmware](https://github.com/artillery3d/genius-firmware) (source code only)
 - The default firmware of the printer
 
 ___
+
+## A flexible bed sheet
+
+Many people online will recommend geting a flexible spring steel sheet covered in a layer of [PEI](https://en.wikipedia.org/wiki/Polyetherimide). Well, I got one just about as soon as I got my printer. But the **Ultrabase clone** of the bed was working fine for me most of the times, you just have to **clean it often and give it a scrub from time to time**, I did not wish to disable it by placing the magnet sheet on top. I though I can put some mangets under the bed to keep the spring steel on top of the Ultrabase and test it like that (just like it works on Prusa printers). Unfortunately just placing magnets on the sides is not enough to keep the spring steel sheet flat as the middle tends to deform while heating.
+
+My only complain so far with the default Ultrabase-like bed surface was the fact that you have to **wait a lot for it to cool down** so it can release the prints, and even at room temperature (24C) I had a hard time removing my PLA ones. And the isolation underneath the bed heating silicone element is not helping with cooling (but can't argue with it's pro's during printing).
+
+So, after about 10 weeks of staring at that PEI sheet every day thinking of alternative ways to attach it to the bed I decided it's time to experiment so I went ahead and **installed the magnetic sticker that on the bed**. **And now I'm glad I did and a bit sorry it took me so long to do it**.
+
+I will list a few of the things noticed during my first week of using the felxible PEI sheet:
+- **Setting the magnetic sticker on the bed is very easy**, just watch some videos on how to install it.
+- I was worried a bit because the sprint steel sheet is shaped a bit like an ark (so not perfecly flat in it's initial shape) but **the magnetic sticker is very powerful** and keeps it in place.
+- **PETG sticks much easier** and it does not need such precise bed leveling anymore (I use a BLTouch but still you have to adjust the Z-offset for it).
+- **PLA no longer needs a hammer to get it off the bed**, just bend the steel sheet and off it goes. Think layers like the bed leveling squares still require a bit of effort to peal because they are flexible so they don't snap.
+- The surface gives a **mirror like finish** to the base of the print. Not really a big fan of that as you can't get the same finish on the top of your print, but it's just personal preference. I guess by scrubbing it a bit you could create a texture, but I'm not going to do that yet.
+- I **did not have to increase the bed temperature**, I actually had to decrease from 65C to 60C I was using for some of my PLAs which were a bit stubborn on the Ultrabase. So thermal transfer through the magnetig sticker seems very good (or the PEI sheet does not require such a high temperature).
+- **It does not require fequent cleaning**, unlike the Ultrabase.
+- It will require **replacement of the thin PEI surface** at some point as it will wear out, but those are relatively cheap. However I am woried that I will not be able to install it as bubble free as the factory preinstalled one.
+
+You can get this kind of **spring steel PEI sheet** from Amazon, Aliexpress, Banggood, your local retailers etc. They are basically everywhere. Mine is **Eryone Magnetic Flexible Printing Surface** and I got it from Amazon. I can't really recommend it since I cannot compare with others but so far it's been really good to me. But whichever you get, measure your bed to see the minimum size you need. For the Genius that would be the **235x235mm**. You can also get them textured if you want and even **double sided** (one side flat and the other textured).
+
+I have now ordered a **BuildTak** foil to place on the other side of the spring steel sheet and make it double sided.
 
 ## Labels for your cables
 
