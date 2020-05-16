@@ -72,11 +72,17 @@ In principle, **before** your print starts you want to perform the following act
 
 Some of the steps like preheating to specified temperatures are usually also done by the slicer, but in case you have it in your startup g-code the slicer will skip that step and rely on your one g-code for preheating.
 
+Startup G-code I use:
+- [for Ultimaker Cura](scripts/startup-Cura.gcode)
+- [for Prusa Slicer](scripts/startup-Prusa_Slicer.gcode)
+
 At the end of your print you usually want to:
 - Retract a bit so that less material oozes
 - Move Z a bit higher
 - Move the bed forward so you have easy access to your print
 - Turn off fans, motors and heating
+
+[End script for Ultimaker Cura and Prusa Slicer](scripts/end.gcode)
 
 ### Material settings
 
