@@ -74,7 +74,9 @@ Changing the default [PTFE lined heatbreak with an all metal one](3d-printer-ove
 
 One way to make your printer blend in your living room is by [building an enclosure](https://photos.app.goo.gl/pB1xUda8z3scRGzd9). This will also prevent draft from ruining your prints and protect the printer from dust. 
 
-I built myself an adapted version of the [Original Prusa i3 MK3 ENCLOSURE - Ikea Lack table](https://www.thingiverse.com/thing:2864118) with modified top supports to which I **added 60mm** in height to match the height of the **Genius**. Of course the plexiglass panels are now **500mm** in height instead of the 440 specified in the guide. The Lack tables are cheap but also hallow inside so I had to add some 3D printed L shaped brackets to all the legs for more stability. Contrary to other beliefs, there is no need for extra cooling of the printer's electronics as the temperature inside does not go over 40C which is fine as most components start having issues only above 50C.
+I built myself an adapted version of the [Original Prusa i3 MK3 ENCLOSURE - Ikea Lack table](https://www.thingiverse.com/thing:2864118) with modified top supports to which I **added 60mm** in height to match the height of the **Genius**. Of course the plexiglass panels are now **500mm** in height instead of the 440mm specified in the guide. The Lack tables are cheap but also hallow inside so I had to add some 3D printed L shaped brackets to all the legs for more stability. All of the modded files are can be [downloaded here](upgrades/Enclosure_mod.zip)
+
+There is no need for extra cooling of the printer's electronics as the temperature inside does not go over 40C which is fine as most components start having issues only above 50C. But, just to be safe you can drill a hole in the bottom table where the printer's case fan is just to make sure it's got enough room to vent.
 
 ## Upgrade your firmware
 
@@ -180,6 +182,20 @@ If your a bit OCD like me and like to keep things organized, you can print yours
 > [Cable Clips](https://www.thingiverse.com/thing:2070838) by pcsentinel
 
 > [Multimaterial Cable Clips](https://www.thingiverse.com/thing:3350640) by JuanPuchol
+
+## A 32bit board and better stepper drivers
+
+If you feel adventurous or have nothing better to do, you can try to upgrade the mainboard to a 32bit version. The most popular boards are the **SKR series from BigTreeTech** (BTT) but other options exists such as the **MakerBase MKS SGEN L** which is a direct replacement for the MKS GEN L 8bit board the Genius and the Sidewinder are both equiped with. At the moment theese boards don't bring anything ground breaking to the table but as Marlin 1.x firmware is no longer developed this is more of a future proof upgrade. There are no new features in Marlin 2.x just yet, but probably there will be in the future as more 32bit only content evolves.
+
+When it comes to stepper drivers, best available right now is the **TMC2209**. It features **StealthChop2** which makes your printer even quieter belive it or not, and makes you wanna replace your extruder fans with something silent cause that's all you will be hearing from now on. Another feature is **StallGuard4** which does load measurement so it can detect when the motor is not moving or has dificulties in moving. This is useful for providing sensorless endstops. If that's not a thing for you, the **TMC2208** is also a good choice. One other thing those drivers have in common is that they can comunicate with the board via UART (serial) so their parameters can be configured from the firmware and you don't have to go around setting jumpers or adjusting v-ref trimmers. They also give a lot of feedback to the firmware so it can also adjust various things on the fly.
+
+Here is a list of all [Trinamic motor drivers](https://www.trinamic.com/products/integrated-circuits/) and the explanation of the [various technologies used](https://www.trinamic.com/technology/adv-technologies/) for each of them.
+
+Whichever board you choose remember it's best to pick the steppers from the same manufacturer for compatibilities reasons.
+
+> [SKR 1.3 Upgrade for Sidewinder X1](https://3dprintbeginner.com/skr-1-3-upgrade-sidewinder-x1/) covered by **3dprintbeginner** is a detailed guide on how to install the BTT SKR board.
+
+> I have also made a quick [Upgrade Artillery Genius or Sidewinder to a MKS SGEN L 32bit board](32bit-mks-sgen-l-upgrade.html) overview guide.
 
 ## Other resources
 
