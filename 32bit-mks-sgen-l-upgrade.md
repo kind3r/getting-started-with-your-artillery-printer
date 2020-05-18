@@ -21,7 +21,7 @@ As for tools, you will need a number **2 [allen key](https://en.wikipedia.org/wi
 
 Make sure you have plenty of space on your workbench and move the X gauntry up top so it stays out of the way.
 
-Before you remove your old board, connect it to a terminal and save the output of your `M503` so that you can later compare it with the defaults for the new board in case want to restore some of your old settings. This will be especially useful in setting your [BLTouch Z-Offset](upgrades.html#auto-bed-leveling).
+**Before you remove your old board**, connect it to a terminal and save the output of your `M503` so that you can later compare it with the defaults for the new board in case want to restore some of your old settings. This will be especially useful in setting your [BLTouch Z-Offset](upgrades.html#auto-bed-leveling).
 
 ## Board setup
 
@@ -54,7 +54,7 @@ If you have a **24V power supply** handy, you can also hook the board to it now 
 
 Your previous TFT firmware should work just fine and there is no need to change it. However, since after the initial BLTouch setup you won't have much use for those Z-Offset adjustments (I make small adjustments straight in the slicer based on temperature and observations), EEPROM reset etc., you can flash my custom version which adds control for the case lights.
 
-> TODO: Create TFT firmware repository
+> Here is the [repository of my custom TFT builds](https://github.com/kind3r/genius-tft-firmware).
 
 ## Remove the old board
 
@@ -142,8 +142,15 @@ If all went you can now assemble the base of your printer and start fine tunning
 
 ## Fine tunning
 
-- steps
-- z-offset
-- max/default speed and acceleration
+Look into the defaults you saved with `M503` on your old board,** compare and update the values** for the new board where required, the **Z-offset** for `M851` being the most important one.
 
-> **Work in progress**
+You may want to **tune the sensitivity of the sensorless endstops** if you notice that they give false positives or they bump too much. Try homing each axis individualy and adjust the sensitivity with `M914`.
+
+I have discovered that the **steps per unit** I used previously (`M92`) did not give me the same dimensional accuracy so I had to tune them a bit. Changes where needed for X, Y and E. Here are my new steps, but your results might be different and I am still performing various tests on this.
+
+```
+Recv: echo:; Steps per unit:
+Recv: echo: M92 X80.38 Y80.38 Z400.00 E447.00
+```
+
+Might wanna take a look at the default max feed rates and acceleration as I set them with my personal preference with an emphasis on quality (that means slower).
