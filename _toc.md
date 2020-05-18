@@ -1,7 +1,7 @@
 - [How 3D printing works](understanding-3d-printing.html)
 - [Overview of a 3D printer](3d-printer-overview.html)
 - [Printing materials](materials.html)
-- [The slicing software](slicer.htnl)
+- [The slicing software](slicer.html)
 - [Setting up your new 3D printer](setup.html)
 - [Tips and tricks](tips.html)
 - [Upgrades for your Artillery printer](upgrades.html) (spare parts and firmware)
