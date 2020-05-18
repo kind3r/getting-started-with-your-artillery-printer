@@ -3,8 +3,6 @@ title: Upgrades for your Artillery printer
 updated: 14-05-2020
 ---
 
-# Upgrades for your Artillery printer
-
 Now that you got your printer up and running and spitting out [calicats](https://www.thingiverse.com/thing:1545913) like there's no tomorrow, you might be inclined to do a **firmware upgrade** to get the latest and greatest. Unfortunately Artillery only provides one firmware based on [Marlin](https://marlinfw.org/) 1.1.9 which is the latest version of [Marlin](https://marlinfw.org/) 1.x released in August 2018. There is a good reason for that which we will discuss a bit later, but for now **don't do any changes to the firmware**.
 
 **You should run your printer for a couple of weeks to make sure it works fine in the default configuration. Play with the [slicer](slicer.html) settings, experiment with different materials, see what works and what doesn't and try to understand why.** Then feel free to start modding and upgrading.

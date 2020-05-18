@@ -3,8 +3,6 @@ title: Setting up your new Artillery 3D printer
 updated: 03-05-2020
 ---
 
-# Setting up your new Artillery 3D printer
-
 You might be very tempted to quickly unpack and assemble your new printer and start printing. **DON'T JUST YET !**
 
 **Before and during unpacking make sure to take some pictures of the box and of it's contents**. Make sure you have good light and cover most of the angles. In case something might have happend during packing or shipping this will be your proof that it wasn't your fault so it's good that you have the unpacking process documented. Artillery has been very flexible and has never asked for this kind of proof but you never know.

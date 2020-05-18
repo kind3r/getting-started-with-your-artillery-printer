@@ -8,17 +8,42 @@
     <meta property="article:author" content="https://facebook.com/kind3r" />
     <meta property="article:publisher" content="https://www.facebook.com/kind3r" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#ffcc00">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#4276b6">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#4276b6">
   </head>
   <body>
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=256579135705218&autoLogAppEvents=1"></script>
       
+      <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/understanding-3d-printing.html">How 3D printing works</a>
+        <a href="/3d-printer-overview.html">Overview of a 3D printer</a>
+        <a href="/materials.html">Printing materials</a>
+        <a href="/slicer.html">The slicing software</a>
+        <a href="/setup.html">Setting up your 3D printer</a>
+        <a href="/tips.html">Tips and tricks</a>
+        <a href="/upgrades.html">Upgrades for your printer</a>
+        <a href="/troubleshooting.html">Troubleshooting issues</a>
+        <a href="javascript:void(0);" class="icon" id="myTopnavMenu">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
       <header>
         <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
         <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>

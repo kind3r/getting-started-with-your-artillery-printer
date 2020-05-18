@@ -2,7 +2,6 @@
 title: "Understanding 3D printing"
 updated: 03-05-2020
 ---
-# Understanding 3D printing
 
 First and most important step to succesful 3D printing is to understand how 3D printing works in general and how this applies to your 3D printer. Once you understand what your 3D printer actually does while printing and how external factors can influence printing you can troubleshoot your problems with ease. 
 

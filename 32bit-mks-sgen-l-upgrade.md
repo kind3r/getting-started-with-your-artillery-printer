@@ -1,10 +1,9 @@
 ---
-title: Upgrade Artillery Genius to a MKS SGEN L 32bit board
+title: Upgrade Artillery Genius or Sidewinder to a MKS SGEN L 32bit board
 updated: 14-05-2020
 sitemap:
   exclude: 'yes'
 ---
-# Upgrade to a MKS SGEN L 32bit board
 
 This page will describe how you can upgrade your Artillery Genius (works for the Sidewinder also with small firmware changes) to a **MKS SGEN L** 32bit board and **MKS TMC2209 V2.0** stepper motor drivers. It will not cover the whole process in detail as it is a pretty straight forward replacement since the boards are almost identical and besides there are plenty of similar upgrade guides, instead I will focus on the key aspects specific to this board and drivers.
 

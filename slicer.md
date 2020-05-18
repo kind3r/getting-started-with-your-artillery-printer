@@ -2,7 +2,6 @@
 title: "Slicer PC sofware"
 updated: 06-05-2020
 ---
-# Slicer PC sofware
 
 Now that we have a basic understanding of [how a 3D printer works](3d-printer-overview) and what [materials](materials) can be used, let's dig into the brains that controls the 3d printing process: **the slicer**.
 

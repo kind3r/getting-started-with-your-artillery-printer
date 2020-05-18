@@ -2,7 +2,6 @@
 title: Tips and tricks for 3D printing
 updated: 10-05-2020
 ---
-# Tips and tricks
 
 ## Proper setup and calibration
 

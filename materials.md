@@ -2,7 +2,6 @@
 title: 3D printing materials
 updated: 03-05-2020
 ---
-# 3D printing materials
 
 There are many materials that can be 3D printed, even chocolate (I know, right ?).
 
