@@ -214,7 +214,7 @@ Now that you got your first material tunned in you should definately print a **s
 
 2nd most useful print is a **cable relief for the ribbon** going to the extruder as it moves a lot and has a tendency to get unplugged.
 
-> I use the [Artillery Genius cable relief](https://www.thingiverse.com/thing:3998458) by ivan_lisi but there are also other versions out there.
+> I use the [Artillery Genius cable relief with cable insert slot](https://www.thingiverse.com/thing:4213436) by galimpic but there are also other versions out there.
 
 3rd print should be a **dust filter** for your filament. For that you also need a piece of a clean dishwater sponge.
 
