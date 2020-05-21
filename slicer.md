@@ -69,7 +69,7 @@ In principle, **before** your print starts you want to perform the following act
 - Preheat nozzle to first layer's printing temperature and wait for it to reach that temperature
 - Purge the nozzle (draw 2 lines for the full length of the bed so that material flows corectly when you start your print)
 
-Some of the steps like preheating to specified temperatures are usually also done by the slicer, but in case you have it in your startup g-code the slicer will skip that step and rely on your one g-code for preheating.
+Some of the steps like preheating to specified temperatures are usually also done by the slicer, but in case you have it in your startup g-code the slicer will skip that step and rely on your own g-code for preheating.
 
 Startup G-code I use:
 - [for Ultimaker Cura](scripts/startup-Cura.gcode)

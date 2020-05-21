@@ -1,6 +1,6 @@
 ---
 title: Setting up your new Artillery 3D printer
-updated: 03-05-2020
+updated: 21-05-2020
 ---
 
 You might be very tempted to quickly unpack and assemble your new printer and start printing. **DON'T JUST YET !**
@@ -77,6 +77,8 @@ To check the extruder motor is also working fine, go to **TOOLS -> HEAT** menu a
 
 It is now time to perform some calibrations, so start by loading your filament, PLA preffered.
 
+Some of the calibration steps and guides require you to **save some settings to EEPROM** so that they persist between printer reboots. Since Artillery Sidewinder and Genius printers come with **EEPROM disabled** you need to put the resulting G-code at the very top of your [slicer's startup script](slicer.html#machine-settings).
+
 ### Check extrusion
 
 Preheat your nozzle according to the specs of your material and **extrude some filament** by holding the idler lever and gently pushing the filament in by hand. **The filament should not put much resistance and it should flow straight down**. 
@@ -100,7 +102,6 @@ Preheat your nozzle according to the specs of your material and extrude some fil
 This ensures the necessary amount of material is extruded. Since the slicer requires a specific **volume** of material to be extruded to create your model, the only way it can calculate how much is actually extruded is by knowing the **diameter** of the material (which is always the same - 1.75mm in our case) and the **length**. The printer can only work with the length of extruded filament given my the number of steps the extruder motor performs while spinning the hobbed gear used to push in filament. If the motor steps per mm of extruded filament is not setup corectly, then you will have more or less material extruded leading to over or under extrusion.
 
 > [Extruder Calibration Guide (with calculator) – E Step Calibration](https://3dprintbeginner.com/extruder-calibration-guide/)
-
 
 ### Flow rate calibration
 
