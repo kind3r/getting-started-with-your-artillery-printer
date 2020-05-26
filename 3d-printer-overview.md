@@ -1,8 +1,7 @@
 ---
-title: "Anatomy of a 3D printer"
+title: "Overview of a 3D printer"
 updated: 03-05-2020
 ---
-# The 3D printer
 
 At it's core level, a 3D printer is basicaly a molten plastic spiting contraption (extruder block or tool) that can move in 3D space to create your model. For a better comparison, think of a motorized hot glue gun. 
 

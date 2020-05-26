@@ -14,9 +14,21 @@ $(window).resize(sectionHeight);
 
 $(function() {
   // find the main menu item and add the ul.pageContent to it
-  // $("nav ul.mainMenu").each(function(){
-    
-  // });
+  const currentPath = window.location.pathname;
+  $("nav ul.mainMenu li").each(function() {
+    const li = $(this);
+    var a = li.find('a').first();
+    if(a.attr('href') == currentPath) {
+      console.log(a.attr('href'));
+      var menu = $("<span>");
+      $("section h1, section h2, section h3").each(function(){
+        menu.append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
+        $(this).attr("id",$(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
+        $("nav ul li:first-child a").parent().addClass("active");
+      });
+      li.after(menu);
+    }
+  });
   $("#myTopnavMenu").on("click", function() {
     $("#myTopnav").toggleClass("responsive");
   });
@@ -26,7 +38,7 @@ $(function() {
     $("nav ul li:first-child a").parent().addClass("active");
   });
 
-  $("nav ul li").on("click", "a", function(event) {
+  $("nav ul.mainMenu li").on("click", "a", function(event) {
     var position = $($(this).attr("href")).offset().top - 190;
     $("html, body").animate({scrollTop: position}, 400);
     $("nav ul li a").parent().removeClass("active");

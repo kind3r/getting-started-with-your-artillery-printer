@@ -142,15 +142,20 @@ If all went you can now assemble the base of your printer and start fine tunning
 
 ## Fine tunning
 
-Look into the defaults you saved with `M503` on your old board,** compare and update the values** for the new board where required, the **Z-offset** for `M851` being the most important one.
+Look into the defaults you saved with `M503` on your old board, **compare and update the values** for the new board where required, the **Z-offset** for `M851` being the most important one. You can also set your bed leveling to slowly fade up to a certain height with `M420 Z<height>` to reduce pressure on the Z motors. 
 
 You may want to **tune the sensitivity of the sensorless endstops** if you notice that they give false positives or they bump too much. Try homing each axis individualy and adjust the sensitivity with `M914`.
 
-I have discovered that the **steps per unit** I used previously (`M92`) did not give me the same dimensional accuracy so I had to tune them a bit. Changes where needed for X, Y and E. Here are my new steps, but your results might be different and I am still performing various tests on this.
+```
+Recv: echo:; StallGuard threshold:
+Recv: echo:  M914 X110 Y150
+```
+
+I have discovered that the **steps per unit** I used previously (`M92`) did not give me the same dimensional accuracy so I had to tune them a bit. Changes where needed for X, Y, Z and E. Here are my new steps, but your results might be different and I am still performing various tests on this.
 
 ```
 Recv: echo:; Steps per unit:
-Recv: echo: M92 X80.38 Y80.38 Z400.00 E447.00
+Recv: echo: M92 X80.38 Y80.38 Z405.00 E447.00
 ```
 
-Might wanna take a look at the default max feed rates and acceleration as I set them with my personal preference with an emphasis on quality (that means slower).
+Might wanna take a look at the default max feed rates and acceleration as I set them with my personal preference with an emphasis towards quality (that means slower).

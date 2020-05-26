@@ -23,12 +23,17 @@ sitemap:
 nav {
   overflow: scroll;
   height: 50%;
+  height: calc(100% - 230px);
 
   a:hover { color: #999 !important; }
 }
 
 section {
   margin-top: 90px;
+}
+
+.downloads p {
+  margin: 1em 0;
 }
 
 /* Add a black background color to the top navigation */
