@@ -155,7 +155,7 @@ I have discovered that the **steps per unit** I used previously (`M92`) did not 
 
 ```
 Recv: echo:; Steps per unit:
-Recv: echo: M92 X80.38 Y80.38 Z405.00 E447.00
+Recv: echo: M92 X80.50 Y80.48 Z404.80 E447.00
 ```
 
 Might wanna take a look at the default max feed rates and acceleration as I set them with my personal preference with an emphasis towards quality (that means slower).

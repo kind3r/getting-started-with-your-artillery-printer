@@ -75,7 +75,9 @@ To check the extruder motor is also working fine, go to **TOOLS -> HEAT** menu a
 
 ## Calibrating your 3D printer
 
-It is now time to perform some calibrations, so start by loading your filament, PLA preffered.
+It is now time to perform some calibrations, so **start by loading your filament**, PLA preffered.
+
+**Connect your 3D printer to a PC** as some of the calibrations require using some sort of terminal (like [Pronterface](https://www.pronterface.com/)) to issue commands to the printer. If you are on Windows you will probably need to install [CH341 serial driver](http://www.wch-ic.com/downloads/CH341SER_EXE.html) for the OS to see your virtual serial port of the printer's mainboard (the driver installer needs to be *Run as Adminstrator*).
 
 Some of the calibration steps and guides require you to **save some settings to EEPROM** so that they persist between printer reboots. Since Artillery Sidewinder and Genius printers come with **EEPROM disabled** you need to put the resulting G-code at the very top of your [slicer's startup script](slicer.html#machine-settings).
 

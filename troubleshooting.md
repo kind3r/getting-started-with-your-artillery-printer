@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting common issues and possible fixes
-updated: 21-05-2020
+updated: 28-05-2020
 ---
 
 This page will be updated often with most common things people seem to run into so check back from time to time. In principle if you have read [this guide](/) from the begining you should be familiar with most of this issues and how to fix them and this section should act as a short summary. Most of the trouble people are having comes from an improper [setup](setup.html), general lack of knowlege about the [3D printing process](understanding-3d-printing.html) in general and understanding the role of the basic components of [your 3D printer](3d-printer-overview.html). Issues can also be caused by [slicer settings](slicer.html) that are not adapted to the model that you are trying to print.
@@ -8,6 +8,14 @@ This page will be updated often with most common things people seem to run into 
 > A good starting point is Simplify3D's [Print Quality Troubleshooting Guide](https://www.simplify3d.com/support/print-quality-troubleshooting/)
 
 > Another excelent guide is [The Ultimate 3D Print Quality Troubleshooting Guide 2019](https://rigid.ink/pages/ultimate-troubleshooting-guide)
+
+## Can't connect to the printer from a PC software
+
+If you can't connect to the printer from a PC software like [Pronterface](https://www.pronterface.com/) there could be one of the following issues:
+- You are using the wrong baudrate, printer is set to work at **250000**, or wrong serial port
+- You did not install the [CH341 serial driver](http://www.wch-ic.com/downloads/CH341SER_EXE.html)
+- Other software (like Cura or Slicer) is using the serial port and you need to close it 
+- The USB cable is bad and you need to replace it
 
 ## Prints not sticking to the bed
 
