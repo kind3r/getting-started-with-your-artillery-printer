@@ -3,7 +3,7 @@ title: Upgrades for your Artillery printer
 updated: 28-05-2020
 ---
 
-Now that you got your printer up and running and spitting out [calicats](https://www.thingiverse.com/thing:1545913) like there's no tomorrow, you might be inclined to do a **firmware upgrade** to get the latest and greatest. Unfortunately Artillery only provides one firmware based on [Marlin](https://marlinfw.org/) 1.1.9 which is the latest version of [Marlin](https://marlinfw.org/) 1.x released in August 2018. There is a good reason for that which we will discuss a bit later, but for now **don't do any changes to the firmware**.
+Now that you got your printer up and running and spitting out [calicats](https://www.thingiverse.com/thing:1545913) like there's no tomorrow, you might be inclined to do a **firmware upgrade** to get the latest and greatest. Unfortunately Artillery only provides one firmware based on [Marlin](https://marlinfw.org/) 1.1.9 which is the latest version of [Marlin](https://marlinfw.org/) 1.x released in August 2018. There is a good reason for that which we will discuss a bit later, but for now **don't do any upgrades to the firmware**.
 
 **You should run your printer for a couple of weeks to make sure it works fine in the default configuration. Play with the [slicer](slicer.html) settings, experiment with different materials, see what works and what doesn't and try to understand why.** Then feel free to start modding and upgrading.
 
@@ -29,32 +29,9 @@ I am still experimenting with different shroud designs but I still have not foun
 
 There is some controversy regarding the benefit of adding a bed probe like the [BLTouch](https://www.antclabs.com/bltouch) or clones. The bed on the **Genius** is rather small and leveling it is easy enough so that it does not really require a leveling probe. On the **Sidewinder** on the other hand it makes more sense as the bed is biger. It also makes sense to add one if you are using different printing surfaces like magnetic PEI sheets on top of your bed and keep swapping between them.
 
-Adding a bed probe unfortunately is not a straight forward process and requires a firmware update for both the mainboard and the TFT.
+But don't think that adding a bed probe will magically solve your leveling issues as unfortunately is not a straight forward process, it requires some calibration and a firmware update for both the mainboard and the TFT.
 
-> **Steve Wagg** has an excelent tutorial on installing [BLTouch - Waggster Mod on a Artillery Sidewinder X1 3D Printer](https://youtu.be/ynm8inRMVkE). The **Genius** already has a plug on the extruder (behind the blue cover) so you don't have to reuse the LED pins. You should watch his video a few times before getting started to make sure you understand the whole process.
-
-![Genius BLTouch pins](img/Genius-BLT-pins.png)
-
-One thing you have to be careful about on the **Genius** is how you connect the probe wires to the plug. Pinout is explained in the [Artillery Genius ABL Port](doc/20191025145855-ABL_Pins.pdf) PDF provided by Artillery. Your probe has 5 wires usually grouped into 2 connectors, one with 2 wires (normally black and white) and another one with 3 wires. The order of the wires in the plug on the extruder board has to be the same as the order of the small plug that goes on the back of your probe. For some reason on my 3D Touch clone wires number 4 and 5 were reversed in the connector so I had to switch them.
-
-Another thing that might be confusing for beginers when setting up a probe is understanding the **Z-Offset** and how to choose the apropiate value. **The probe** (a BLTouch clone in our example) has a **pin** that retracts when touches the bed and triggers a signal similar to an endstop. That is what the printer thinks is the zero **point on the Z axis** (remember how [the printer only knows where it is based on a reference point](3d-printer-overview.html) ?). 
-
-![BLTouch Z-offset](img/Genius-BLT-offset.png)
-
-**The distance between the probe's trigger point and the actual position of the nozzle is the Z-Offset**. It is always a negative number as it needs to lower the nozzle, basically substracting that value from the coordinates in your G-code file. For example if you have a Z-offset of -1.5 and you want to move your nozzle to print the first layer at 0.2mm, you would issue the command to move at **Z = 0.2** but the printer will actually move at **Z = 0.2 - 1.5 = -1.3**.
-
-As you saw in Steve Wagg's video, you need to make your initial adjustment while heated to your preffered temperature (I recommend using **210C** since it's most common for PLA) using the TFT commands and then save the new Z-Offset to EEPROM. This makes it easier than guessing it. But it might still not be enough and you would need to adjust it manually especially when changing printing temperatures, just like you would with [regular bed leveling](3d-printer-overview.html#a-leveled-bed-provides-good-adhesion-and-even-layers) because the whole heatblock expands and that will make the Z-offset smaller if you increase the temperature or bigger if you decrease it from the reference temperature you initially calibrated at. To view your current Z-Offset you can use any terminal (like Pronterface or OctoPrint's terminal), issue an `M503` and look for the **Z-Probe Offset M851**.
-
-```
-Send: M503
-...
-Recv: echo:; Z-Probe Offset (mm):
-Recv: echo:  M851 X28.00 Y-33.00 Z-1.50
-```
-
-Based on my experience I noticed that there is a difference of more or less **0.0035mm for each 1C** of temperature difference. So for example if you calibrated at **210C** and you want to print something at **240C**, you have a difference of **30C** so that would mean you have to add **30 * 0.0035 = 0.105** to your Z-Offset making it **-1.5 + 0.105 = -1.395** or rounded -1.39 or -1.40. While it won't make much of a difference for +/-10C you can see that for 30C it's half a layer size of 0.2mm and that will count. Of course your results might vary depending on your nozzle and heatblock materials if you upgraded from the original ones, and also some materials preffer to be closer to the bed while others a bit further away, so feel free to experiment with the offset.
-
-To set a new offset you can use `M851 Z-1.70` (replace -1.70 with the new offset of course). You can put that in your startup G-code for the filament for **Prusa Slicer** or use a plugin like [Z Offset Setting](https://marketplace.ultimaker.com/app/cura/plugins/fieldofview/ZOffsetPlugin) in **Ultimaker Cura**.
+> I wrote a detailed guide on [How to setup a BLTouch probe on tour Artillery printer](/2020/05/30/BLTouch-setup.html)
 
 ## OctoPrint
 
@@ -68,7 +45,7 @@ As there is a lot of empty space inside the base of the printer, I have installe
 
 ## And all metal heatbreak
 
-Changing the default [PTFE lined heatbreak with an all metal one](3d-printer-overview.html#the-heatbreak) will allow you to use extruder temperatures above the 250C recomended for the one that comes with the printer. This will grant access to printing more specialized materials but could create issues for the more basic ones like PLA. In my experience of about 6 weeks since I upgraded to an all metal heatbreak I did not experiece such issues but I guess it's too early to tell.
+Changing the default [PTFE lined heatbreak with an all metal one](3d-printer-overview.html#the-heatbreak) will allow you to use extruder temperatures above the 240C recomended for the one that comes with the printer. This will grant access to printing more specialized materials but could create issues for the more basic ones like PLA. In my experience of about 6 weeks since I upgraded to an all metal heatbreak I did not experiece such issues but I guess it's too early to tell.
 
 ## Build an enclosure
 
@@ -86,7 +63,7 @@ In order to update your mainboad's firmware you need to open the printer and dis
 
 The TFT can be updated via a SD Card (16Gb or less), so it's a bit easier. 
 
-**Do not upgrade your firmware until your machine is fully functional using the firmware it came with**. Upgrading the firmware will not solve your problems with the machine (if you have any).
+**Do not upgrade your firmware until your machine is fully functional using the firmware it came with**. Upgrading the firmware will not magicaly solve your problems with the machine (if you have any) and won't make your prints any better (whith some exceptions like Linear Advance).
 
 ### Reasons to upgrade your firmware
 
@@ -159,7 +136,7 @@ My only complain so far with the default Ultrabase-like bed surface was the fact
 
 So, after about 10 weeks of staring at that PEI sheet every day thinking of alternative ways to attach it to the bed I decided it's time to experiment so I went ahead and **installed the magnetic sticker that on the bed**. **And now I'm glad I did and a bit sorry it took me so long to do it**.
 
-I will list a few of the things noticed during my first week of using the felxible PEI sheet:
+I will list a few of the things noticed during my first weeks of using the felxible PEI sheet:
 - **Setting the magnetic sticker on the bed is very easy**, just watch some videos on how to install it.
 - I was worried a bit because the sprint steel sheet is shaped a bit like an ark (so not perfecly flat in it's initial shape) but **the magnetic sticker is very powerful** and keeps it in place.
 - **PETG sticks much easier** and it does not need such precise bed leveling anymore (I use a BLTouch but still you have to adjust the Z-offset for it).
@@ -168,6 +145,7 @@ I will list a few of the things noticed during my first week of using the felxib
 - I **did not have to increase the bed temperature**, I actually had to decrease from 65C to 60C I was using for some of my PLAs which were a bit stubborn on the Ultrabase. So thermal transfer through the magnetig sticker seems very good (or the PEI sheet does not require such a high temperature).
 - **It does not require fequent cleaning**, unlike the Ultrabase.
 - It will require **replacement of the thin PEI surface** at some point as it will wear out, but those are relatively cheap. However I am woried that I will not be able to install it as bubble free as the factory preinstalled one.
+- **Do not go above 80C when using a spring steel PEI sheet**. It will cause your prints to stick too hard, melt the adhesive that keeps the PEI foil on the steel sheet and as a result the PEI might start to peal off.
 
 You can get this kind of **spring steel PEI sheet** from Amazon, Aliexpress, Banggood, your local retailers etc. They are basically everywhere. Mine is **Eryone Magnetic Flexible Printing Surface** and I got it from Amazon. I can't really recommend it since I cannot compare with others but so far it's been really good to me. But whichever you get, measure your bed to see the minimum size you need. For the Genius that would be the **235x235mm**. You can also get them textured if you want and even **double sided** (one side flat and the other textured).
 
@@ -195,7 +173,7 @@ Whichever board you choose remember it's best to pick the steppers from the same
 
 > [SKR 1.3 Upgrade for Sidewinder X1](https://3dprintbeginner.com/skr-1-3-upgrade-sidewinder-x1/) covered by **3dprintbeginner** is a detailed guide on how to install the BTT SKR board.
 
-> I have also made a quick [Upgrade Artillery Genius or Sidewinder to a MKS SGEN L 32bit board](32bit-mks-sgen-l-upgrade.html) overview guide.
+> I have also made a quick [Upgrade Artillery Genius or Sidewinder to a MKS SGEN L 32bit board](/2020/05/14/MKS-SGEN-L-32bit-board.html) overview guide.
 
 ## Other resources
 

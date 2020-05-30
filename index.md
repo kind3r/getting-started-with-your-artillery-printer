@@ -23,3 +23,16 @@ If you don't take time to understand how the whole 3D printing process works, fi
 Reading all this will help you understand all the actors involved in the 3D printing so that when you run into an issue, if you can't figure it out yourself you can at least ask a more experienced user the right questions.
 
 **Next step**: [How 3D printing works](understanding-3d-printing.html)
+
+## Other guides
+
+Deep dive on topics I considered important and I noticed beginers are struggling with understanding, but also some advanced topics and experiments I did. Newer ones are first but this does not mean they are in a particular order of importance. Most are already linked throughout the main guide.
+
+<div class="bloglist">
+  {% for post in site.posts %}
+    <a href="{{ post.url }}" class="blogpost" style="background-image: url({{ post.cover }})">
+      <span>{{ post.title }}</span>
+    </a>
+  {% endfor %}
+  <div style="clear: both">&nbsp;</div>
+</div>
