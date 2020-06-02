@@ -1,6 +1,6 @@
 ---
 title: How to setup a BLTouch probe on tour Artillery printer
-updated: 30-05-2020
+updated: 02-06-2020
 cover: /img/Genius-BLT-pins.png
 ---
 
@@ -48,9 +48,12 @@ The **Genius** already has a plug on the extruder (behind the blue cover) so you
 
 ## Mount and connect
 
-**Steve**'s video does a great job of explaining how to fix your BLTouch on the printed mount and then to the extruder so I'm not going to go over that again. It also explains how to connect it on the Artillery Sidewinder, not going over that either.
-
-For the **Artillery Genius** on the other hand, things might look straight forward but they are a bit tricky.
+**Steve**'s video does a great job of explaining how to fix your BLTouch on the printed mount and then to the extruder so I'm not going to go over that again. It also explains how to connect it on the Artillery Sidewinder, not going over that either. I will explain a bit about what the connections on the BLTouch do from the diagram picture below:
+- `1` - **Endstop trigger** (goes to Z-min or Z-max pin)
+- `2` - **Ground**
+- `3` - **Communication with the probe** (goes to a servo port)
+- `4` - **+5V**
+- `5` - **Ground**
 
 ![Genius BLTouch pins](/img/Genius-BLT-pins.png)
 
