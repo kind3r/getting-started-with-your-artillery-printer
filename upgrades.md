@@ -1,6 +1,6 @@
 ---
 title: Upgrades for your Artillery printer
-updated: 28-05-2020
+updated: 14-06-2020
 ---
 
 Now that you got your printer up and running and spitting out [calicats](https://www.thingiverse.com/thing:1545913) like there's no tomorrow, you might be inclined to do a **firmware upgrade** to get the latest and greatest. Unfortunately Artillery only provides one firmware based on [Marlin](https://marlinfw.org/) 1.1.9 which is the latest version of [Marlin](https://marlinfw.org/) 1.x released in August 2018. There is a good reason for that which we will discuss a bit later, but for now **don't do any upgrades to the firmware**.
@@ -108,6 +108,13 @@ ___
 - Linear advance
 - Babystepping
 - Bilinear Auto Bed Level for BLTouch (or compatible) probes
+
+___
+[G2Barbour's M600 Enabled Firmware](https://www.thingiverse.com/thing:4251390) for both Sidewinder X1 and Genius
+- Marlin 2.0.5.3
+- Manual feature set that you can customize
+- Requires building your own mainboard firmware
+- TFT build (BTT clone) with support for filament change (M600) and other improvements
 
 ___
 [Firmware that I use for my Artillery Genius](https://github.com/kind3r/genius-firmware/releases) (more or less same as Waggster but on Marlin 1.x and with my own personal tweaks)
