@@ -7,6 +7,22 @@ Now that you got your printer up and running and spitting out [calicats](https:/
 
 **You should run your printer for a couple of weeks to make sure it works fine in the default configuration. Play with the [slicer](slicer.html) settings, experiment with different materials, see what works and what doesn't and try to understand why.** Then feel free to start modding and upgrading.
 
+## Original part suppliers
+
+Should you need out of warranty replacement parts (or just don't want to wait for Artillery to send them to you), here is a list of suppliers of original Artillery Sidewinder and Genius spare parts across the world: 
+
+> **International**:  
+> [https://www.happy3dthai-artillery.com/](https://www.happy3dthai-artillery.com/)  
+
+> **US** :  
+> [https://fulament.com/](https://fulament.com/)  
+> [https://www.alien3d.us/](https://www.alien3d.us/)  
+
+> **Europe**:  
+> [https://3dprinterdele.dk/](https://3dprinterdele.dk/)  
+> [https://www.printaplenty.co.uk/printerparts](https://www.printaplenty.co.uk/printerparts)  
+> [https://www.3d-dez.de/](https://www.3d-dez.de/) - Artillery distributor Germany  
+
 ## A few 3D printed parts
 
 As mentioned in the [setup procedure](setup.html#your-first-useful-prints), print a [bed cable strain relief](https://www.thingiverse.com/thing:4056229), [flat ribbon strain relief](https://www.thingiverse.com/thing:3998458) and a [dust filter](https://www.thingiverse.com/thing:190118). Very handy and easy to install upgrades that will save you a lot of trouble in the long run.
@@ -187,19 +203,6 @@ Whichever board you choose remember it's best to pick the steppers from the same
 > A list of upgrades and replacement parts can be found on 3D Nexus' article [Artillery 3D Printers, Parts, Upgrades And Mods](https://3d-nexus.com/newsroom/fdm-printing/artillery-3d-printers-parts-upgrades-and-mods?fbclid=IwAR15y_IgitSDFj-ReUOPp1ZuJ7GZBjObifABdUXcDEhpicH2ia6ILlEDWO8)
 
 > 3dprintbeginner's pick at his favourite upgrades [Sidewinder X1 Upgrades – Paid and Free](https://3dprintbeginner.com/sidewinder-x1-upgrades/)
-
-### Original part suppliers
-
-> **International**:  
-> [https://www.happy3dthai-artillery.com/](https://www.happy3dthai-artillery.com/)  
-
-> **US** :  
-> [https://www.alien3d.us/](https://www.alien3d.us/)  
-
-> **Europe**:  
-> [https://3dprinterdele.dk/](https://3dprinterdele.dk/)  
-> [https://www.printaplenty.co.uk/printerparts](https://www.printaplenty.co.uk/printerparts)  
-> [https://www.3d-dez.de/](https://www.3d-dez.de/) - Artillery distributor Germany  
 
 **Next step**: [Troubleshooting common issues and how to fix them](troubleshooting.html)
 
