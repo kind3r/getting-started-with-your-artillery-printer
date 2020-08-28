@@ -1,5 +1,5 @@
 ---
-title: How to setup a BLTouch probe on tour Artillery printer
+title: How to setup a BLTouch probe on your Artillery printer
 updated: 02-06-2020
 cover: /img/Genius-BLT-pins.png
 ---
