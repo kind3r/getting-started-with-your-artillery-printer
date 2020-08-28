@@ -20,8 +20,13 @@ Should you need out of warranty replacement parts (or just don't want to wait fo
 
 > **Europe**:  
 > [https://3dprinterdele.dk/](https://3dprinterdele.dk/)  
-> [https://www.printaplenty.co.uk/printerparts](https://www.printaplenty.co.uk/printerparts)  
+> [https://www.printaplenty.co.uk/](https://www.printaplenty.co.uk/)  
 > [https://www.3d-dez.de/](https://www.3d-dez.de/) - Artillery distributor Germany  
+> [https://3dplady.de/](https://3dplady.de/) - Official Artillery 3D partner for Germany
+
+## Other parts and upgrades
+
+> [https://www.abs-3d.de/](https://www.abs-3d.de/) - Machined aluminium print beds
 
 ## A few 3D printed parts
 
