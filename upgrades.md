@@ -52,7 +52,7 @@ There is some controversy regarding the benefit of adding a bed probe like the [
 
 But don't think that adding a bed probe will magically solve your leveling issues as unfortunately is not a straight forward process, it requires some calibration and a firmware update for both the mainboard and the TFT.
 
-> I wrote a detailed guide on [How to setup a BLTouch probe on tour Artillery printer](/2020/05/30/BLTouch-setup.html)
+> I wrote a detailed guide on [How to setup a BLTouch probe on your Artillery printer](/2020/05/30/BLTouch-setup.html)
 
 ## OctoPrint
 
